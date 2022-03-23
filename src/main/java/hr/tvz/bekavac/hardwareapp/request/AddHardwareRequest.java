@@ -2,7 +2,6 @@ package hr.tvz.bekavac.hardwareapp.request;
 
 import hr.tvz.bekavac.hardwareapp.model.Hardware;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
