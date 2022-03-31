@@ -1,5 +1,6 @@
 package hr.tvz.bekavac.hardwareapp.impl;
 
+import hr.tvz.bekavac.hardwareapp.dto.HardwareDTO;
 import hr.tvz.bekavac.hardwareapp.model.Hardware;
 import hr.tvz.bekavac.hardwareapp.repository.HardwareRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -45,5 +46,10 @@ public class HardwareRepositoryImpl implements HardwareRepository {
         }else{
             log.info("Hardware item {} doesn't exist to delete", code);
         }
+    }
+
+    @Override
+    public void updateHardware(String code, Hardware newHardware) {
+        HARDWARE_IN_STOCK.stream().filter(hardware -> hardware.getCode().equals(newHardware.getCode())).findFirst().get().update(newHardware);
     }
 }

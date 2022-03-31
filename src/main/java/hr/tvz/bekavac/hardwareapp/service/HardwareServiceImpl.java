@@ -3,11 +3,12 @@ package hr.tvz.bekavac.hardwareapp.service;
 import hr.tvz.bekavac.hardwareapp.dto.HardwareDTO;
 import hr.tvz.bekavac.hardwareapp.model.Hardware;
 import hr.tvz.bekavac.hardwareapp.repository.HardwareRepository;
-import hr.tvz.bekavac.hardwareapp.request.AddHardwareRequest;
+import hr.tvz.bekavac.hardwareapp.request.HardwareCommand;
 import hr.tvz.bekavac.hardwareapp.service.interfaces.HardwareService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -29,21 +30,39 @@ public class HardwareServiceImpl implements HardwareService {
         return new HardwareDTO(hardware.getName(), hardware.getPrice());
     }
 
-    @Override
-    public HardwareDTO findByCode(String code) {
-        return hardwareRepository.findByCode(code).map(this::mapHardwareToDTO).orElse(null);
+    private Hardware mapCommandToHardware(HardwareCommand hardwareCommand){
+        return new Hardware().builder().code(hardwareCommand.getCode()).name(hardwareCommand.getName()).type(hardwareCommand.getType())
+                .price(hardwareCommand.getPrice()).onStorage(hardwareCommand.getOnStorage()).build();
+    }
+
+    private HardwareDTO mapCommandToDTO(HardwareCommand request) {
+        return new HardwareDTO(request.getName(), request.getPrice());
     }
 
     @Override
-    public void addHardware(AddHardwareRequest hardware) {
-        hardwareRepository.addHardware(new Hardware(hardware.getName(), hardware.getCode(),
-                hardware.getPrice(), hardware.getType(), hardware.getOnStorage()));
+    public Optional<HardwareDTO> findByCode(String code) {
+        return Optional.ofNullable(hardwareRepository.findByCode(code).map(this::mapHardwareToDTO).orElse(null));
+    }
 
+    @Override
+    public Optional<HardwareDTO> addHardware(HardwareCommand hardware) {
+        Hardware newHardware = new Hardware(hardware.getName(), hardware.getCode(),
+                hardware.getPrice(), hardware.getType(), hardware.getOnStorage());
+
+        hardwareRepository.addHardware(newHardware);
+        return Optional.ofNullable(mapHardwareToDTO(newHardware));
     }
 
     @Override
     public void deleteByCode(String code) {
         hardwareRepository.deleteByCode(code);
     }
+
+    @Override
+    public Optional<HardwareDTO> updateHardware(String code, HardwareCommand request) {
+        hardwareRepository.updateHardware(code, mapCommandToHardware(request));
+        return Optional.ofNullable(mapCommandToDTO(request));
+    }
+
 
 }
