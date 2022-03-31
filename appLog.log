@@ -1230,7 +1230,7 @@ java.io.EOFException: null
 2022-03-22 19:05:06.022 DEBUG 8052 --- [http-nio-8080-exec-1] org.apache.tomcat.util.http.Parameters   : Set encoding to UTF-8
 2022-03-22 19:05:06.023 DEBUG 8052 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/hardware/addItem", parameters={}
 2022-03-22 19:05:06.031 DEBUG 8052 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#addHardware(AddHardwareRequest)
-2022-03-22 19:05:06.178 DEBUG 8052 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.AddHardwareRequest@2fa6329a]
+2022-03-22 19:05:06.178 DEBUG 8052 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.HardwareCommand@2fa6329a]
 2022-03-22 19:05:10.259  INFO 8052 --- [http-nio-8080-exec-1] h.t.b.h.controller.HardwareController    : Adding hardware OTHER ITEM into list
 2022-03-22 19:05:10.332 DEBUG 8052 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
 2022-03-22 19:05:10.332 DEBUG 8052 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Nothing to write: null body
@@ -1267,7 +1267,7 @@ Content-Length: 119
 2022-03-22 19:05:28.860 DEBUG 8052 --- [http-nio-8080-exec-3] org.apache.tomcat.util.http.Parameters   : Set encoding to UTF-8
 2022-03-22 19:05:28.861 DEBUG 8052 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/hardware/addItem", parameters={}
 2022-03-22 19:05:28.861 DEBUG 8052 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#addHardware(AddHardwareRequest)
-2022-03-22 19:05:28.863 DEBUG 8052 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.AddHardwareRequest@64a562e]
+2022-03-22 19:05:28.863 DEBUG 8052 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.HardwareCommand@64a562e]
 2022-03-22 19:05:44.952  INFO 8052 --- [http-nio-8080-exec-3] h.t.b.h.controller.HardwareController    : Adding hardware OTHER ITEM into list
 2022-03-22 19:05:44.953 DEBUG 8052 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
 2022-03-22 19:05:44.954 DEBUG 8052 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Nothing to write: null body
