@@ -2,6 +2,7 @@ package hr.tvz.bekavac.hardwareapp.service.interfaces;
 
 import hr.tvz.bekavac.hardwareapp.dto.HardwareDTO;
 import hr.tvz.bekavac.hardwareapp.request.HardwareCommand;
+import hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,4 +18,6 @@ public interface HardwareService {
     void deleteByCode(String code);
 
     Optional<HardwareDTO> updateHardware(String code, HardwareCommand request);
+
+    Optional<HardwareDTO> updateOnStorage(String code, UpdateOnStorage request);
 }

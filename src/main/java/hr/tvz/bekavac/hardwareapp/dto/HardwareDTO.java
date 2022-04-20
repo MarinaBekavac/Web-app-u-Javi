@@ -10,6 +10,7 @@ import lombok.Setter;
 @Setter
 public class HardwareDTO {
 
+    private String code;
     private String name;
     private double price;
 

@@ -1,0 +1,96 @@
+<!--<div>
+    <h3>Unesi novog hardware-a</h3>
+    <div>
+    <label>code:
+        <div>
+        <input  ngModel name="code" #code />
+        </div>
+    </label>
+    </div>
+    <div>
+    <label>Name:
+        <div>
+        <input  ngModel name="name" #name />
+        </div>
+    </label>
+    </div>
+    <div>
+        <label>price:
+        <div>
+        <input  ngModel name="price" type="number" #price />
+        </div>
+        </label>
+    </div>
+    <div>
+        <label>type:
+        <div>
+        <select >
+            <option  *ngFor="let name of enumKeys" [value]="name"> {{name}} </option>
+          </select>
+        </div>
+        </label>
+    </div>
+    <div>
+        <label>OnStorage:
+        <div>
+        <input  ngModel name="onStorage" type="number" #onStorage />
+        </div>
+        </label>
+    </div>
+
+</div>
+
+
+<button (click)="saveHardware()" class="btn btn-success">Submit</button>
+
+<div *ngIf="submitted">
+  <h4>Tutorial was submitted successfully!</h4>
+</div>-->
+
+<div>
+<label>code:
+    <div>
+    <input  ngModel name="code" #code required
+    [(ngModel)]="hardware.code"/>
+    </div>
+</label>
+</div>
+<div>
+<label>Name:
+    <div>
+    <input  ngModel name="name" #name required
+    [(ngModel)]="hardware.name" />
+    </div>
+</label>
+</div>
+<div>
+    <label>price:
+    <div>
+    <input  ngModel name="price" type="number" #price required
+    [(ngModel)]="hardware.price"/>
+    </div>
+    </label>
+</div>
+<div>
+    <label>type:
+    <div>
+
+    <select [(ngModel)]="hardwareType">  
+        <option *ngFor="let name of enumKeys" [value]="name">{{name}}</option>  
+    </select>
+    </div>
+    </label>
+</div>
+<div>
+    <label>OnStorage:
+    <div>
+    <input  ngModel name="onStorage" type="number" #onStorage required
+    [(ngModel)]="hardware.onStorage"/>
+    </div>
+    </label>
+</div>
+
+
+<button (click)="addHardware()" class="btn btn-success">Submit</button>
+
+

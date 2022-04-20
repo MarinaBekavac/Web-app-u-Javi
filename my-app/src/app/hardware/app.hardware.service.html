@@ -1,0 +1,16 @@
+<h2>Popis studenata</h2>
+<ul class="hardware">
+<li *ngFor="let hardwarer of hardware"
+(click)="onSelect(hardwarer)"
+[class.selected]="hardware === selectedHardaware">
+<span class="badge">{{hardwarer.jmbag}}</span> {{hardwarer.numberOfECTS}} ECTS
+</li>
+</ul>
+<app-hardware-detail [hardware]="selectedHardware" ></app-hardware-detail>
+
+<div *ngIf="hardware">
+    <h2>{{hardware.jmbag}} - detalji studenta</h2>
+    <div><span>JMBAG: </span>{{hardware.jmbag}}</div>
+    <div><span>Broj ECTS bodova: </span>{{hardware.numberOfECTS}}</div>
+    <div *ngIf="hardware.tuitionShouldBePaid"> Student treba platiti školarinu. </div>
+ </div>

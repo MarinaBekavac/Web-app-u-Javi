@@ -1,8 +1,8 @@
 package hr.tvz.bekavac.hardwareapp.impl;
 
-import hr.tvz.bekavac.hardwareapp.dto.HardwareDTO;
 import hr.tvz.bekavac.hardwareapp.model.Hardware;
 import hr.tvz.bekavac.hardwareapp.repository.HardwareRepository;
+import hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
@@ -51,5 +51,11 @@ public class HardwareRepositoryImpl implements HardwareRepository {
     @Override
     public void updateHardware(String code, Hardware newHardware) {
         HARDWARE_IN_STOCK.stream().filter(hardware -> hardware.getCode().equals(newHardware.getCode())).findFirst().get().update(newHardware);
+    }
+
+    @Override
+    public Optional<Hardware> updateOnStorage(String code, int onStorage) {
+        HARDWARE_IN_STOCK.stream().filter(hardware -> hardware.getCode().equals(code)).findFirst().get().setOnStorage(onStorage);
+        return findByCode(code);
     }
 }

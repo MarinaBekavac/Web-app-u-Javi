@@ -3,11 +3,18 @@
 </style>
 
 <body>
-  <div class="title">
+  <!--<div class="title">
     <h1>{{title}}</h1>
   </div>
   <div class="break"></div>
   <app-hardware></app-hardware>
   <div class="break"></div>
-  <app-hardware-details></app-hardware-details>
+  <app-hardware-details></app-hardware-details>-->
+  <div>
+    <h1>{{title}}</h1>
+  <nav>
+    <a routerLink="/hardware">Hardwarest</a>
+  </nav>
+  </div>
+  <router-outlet></router-outlet>
 </body>

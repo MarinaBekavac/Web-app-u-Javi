@@ -1,5 +1,28 @@
-<div *ngIf="hardware">
+<!--<div *ngIf="hardware">
     <h2>Details about {{hardware.name}}</h2>
     <div><span>Price: </span>{{hardware.price}} EUR</div>
-    <!--<div *ngIf="hardware.tuitionShouldBePaid"> Student treba platiti školarinu. </div>-->
- </div>
+ </div>-->
+
+ <div *ngIf="viewMode;">
+    <div *ngIf="hardware">
+      <h4>Details</h4>
+      <div>
+        <label><strong>Name:</strong></label> {{ hardware.name }}
+      </div>
+      <div>
+        <label><strong>Code:</strong></label>
+        {{ hardware.code }}
+      </div>
+      <div>
+        <label><strong>Price:</strong></label>
+        {{ hardware.price }}
+      </div>
+      <button (click)="deleteHardware()">
+        Delete
+      </button>
+      <button routerLink="/hardware">
+          Back
+      </button>
+  </div>
+
+ </div> 

@@ -1,7 +1,7 @@
 package hr.tvz.bekavac.hardwareapp.repository;
 
-import hr.tvz.bekavac.hardwareapp.dto.HardwareDTO;
 import hr.tvz.bekavac.hardwareapp.model.Hardware;
+import hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,4 +17,6 @@ public interface HardwareRepository {
     void deleteByCode(String code);
 
     void updateHardware(String code, Hardware newHardware);
+
+    Optional<Hardware> updateOnStorage(String code, int onStorage);
 }

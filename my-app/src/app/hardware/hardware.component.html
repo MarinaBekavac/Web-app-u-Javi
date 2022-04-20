@@ -1,0 +1,14 @@
+
+
+<h2>Popis studenata</h2>
+<ul class="hardware">
+<li *ngFor="let hardwarer of hardware"
+(click)="onSelect(hardwarer)"
+[class.selected]="hardwarer === selectedHardware">
+<span class="badge">{{hardwarer.jmbag}}</span> {{hardwarer.numberOfECTS}} ECTS
+</li>
+</ul>
+
+<app-hardware-details [hardware]="selectedHardware"></app-hardware-details>
+
+

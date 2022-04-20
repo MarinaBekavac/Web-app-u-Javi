@@ -4,6 +4,7 @@ import hr.tvz.bekavac.hardwareapp.dto.HardwareDTO;
 import hr.tvz.bekavac.hardwareapp.model.Hardware;
 import hr.tvz.bekavac.hardwareapp.repository.HardwareRepository;
 import hr.tvz.bekavac.hardwareapp.request.HardwareCommand;
+import hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage;
 import hr.tvz.bekavac.hardwareapp.service.interfaces.HardwareService;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +28,7 @@ public class HardwareServiceImpl implements HardwareService {
     }
 
     private HardwareDTO mapHardwareToDTO(final Hardware hardware){
-        return new HardwareDTO(hardware.getName(), hardware.getPrice());
+        return new HardwareDTO(hardware.getCode(), hardware.getName(), hardware.getPrice());
     }
 
     private Hardware mapCommandToHardware(HardwareCommand hardwareCommand){
@@ -36,7 +37,7 @@ public class HardwareServiceImpl implements HardwareService {
     }
 
     private HardwareDTO mapCommandToDTO(HardwareCommand request) {
-        return new HardwareDTO(request.getName(), request.getPrice());
+        return new HardwareDTO(request.getCode(), request.getName(), request.getPrice());
     }
 
     @Override
@@ -64,5 +65,9 @@ public class HardwareServiceImpl implements HardwareService {
         return Optional.ofNullable(mapCommandToDTO(request));
     }
 
-
+    @Override
+    public Optional<HardwareDTO> updateOnStorage(String code, UpdateOnStorage request) {
+        HardwareDTO newHardwareDto = mapHardwareToDTO(hardwareRepository.updateOnStorage(code, request.getOnStorage()).get());
+        return Optional.ofNullable(newHardwareDto);
+    }
 }

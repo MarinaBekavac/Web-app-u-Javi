@@ -1,13 +1,31 @@
-<div class="hardwareDiv">
+<!--<div class="hardwareDiv">
     <h2>List of hardware</h2>
     <ul class="hardware">
     <li *ngFor="let selectedHardware of hardware"
     (click)="onSelect(selectedHardware)"
     [class.selected]="selectedHardware === selectedHardware">
-    <!--<i class='fas fa-desktop'>fa-desktop</i>-->
     <span class="badge">{{selectedHardware.name}}</span> 
     </li>
     </ul>
 
     <app-hardware-details [hardware]="selectedHardware"></app-hardware-details>
-</div>
+</div>-->
+
+<ul class="hardware">
+    <!--<li *ngFor="let selectedHardware of hardware"
+    (click)="onSelect(selectedHardware)"
+    [class.selected]="selectedHardware === selectedHardware">
+    <span class="badge">{{selectedHardware.name}}</span> 
+    </li>-->
+    <li *ngFor="let selectedHardware of hardware" [class.selected]="selectedHardware === selectedHardware" 
+    (click)="showDetails(selectedHardware.code)" >
+        <a [routerLink]="['/hardware/', selectedHardware.code]">{{selectedHardware.name}}</a>
+    </li>
+</ul>
+
+<app-hardware-details
+      [viewMode]="true"
+      [hardware]="selectedHardware"
+    ></app-hardware-details>
+
+<app-hardware-add></app-hardware-add>

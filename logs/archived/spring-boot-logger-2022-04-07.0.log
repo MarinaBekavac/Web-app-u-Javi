@@ -1,0 +1,925 @@
+2022-04-07 18:11:24,307 INFO o.h.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.2.Final
+2022-04-07 18:11:24,292 INFO o.s.boot.StartupInfoLogger [main] Starting HardwareAppApplication using Java 17.0.1 on DESKTOP-BEMQGGH with PID 17304 (C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt)
+2022-04-07 18:11:24,452 INFO o.s.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-04-07 18:11:28,334 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-04-07 18:11:28,356 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:11:28,361 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-04-07 18:11:28,364 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-07 18:11:28,903 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-04-07 18:11:28,908 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4324 ms
+2022-04-07 18:11:32,872 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-04-07 18:11:33,681 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 7 mappings in 'requestMappingHandlerMapping'
+2022-04-07 18:11:34,095 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-04-07 18:11:34,193 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-04-07 18:11:36,692 INFO o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-07 18:11:37,418 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:11:37,538 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-07 18:11:37,581 INFO o.s.boot.StartupInfoLogger [main] Started HardwareAppApplication in 15.584 seconds (JVM running for 23.459)
+2022-04-07 18:13:18,516 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-07 18:13:18,516 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2022-04-07 18:13:18,517 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected StandardServletMultipartResolver
+2022-04-07 18:13:18,517 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected AcceptHeaderLocaleResolver
+2022-04-07 18:13:18,519 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected FixedThemeResolver
+2022-04-07 18:13:18,520 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3708fdd6
+2022-04-07 18:13:18,522 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.support.SessionFlashMapManager@44e2e6df
+2022-04-07 18:13:18,523 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-04-07 18:13:18,523 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 6 ms
+2022-04-07 18:13:18,537 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] GET "/hardware", parameters={}
+2022-04-07 18:13:18,545 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:13:18,573 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-2] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:13:18,574 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@76bcbf51, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@48b (truncated)...]
+2022-04-07 18:13:18,626 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed 200 OK
+2022-04-07 18:13:18,657 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-2] {"timestamp":1649347998.533578800,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["748e3f0b-7234-411f-b811-fb4416761b6d"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:13:18 GMT"],"Content-Type":["application/json"]}},"timeTaken":97}
+2022-04-07 18:13:25,869 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-3] GET "/hardware/385-C-P-U", parameters={}
+2022-04-07 18:13:25,870 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getByCode(String)
+2022-04-07 18:13:25,878 INFO h.t.b.h.impl.HardwareRepositoryImpl [http-nio-8080-exec-3] Finding hardware with code '385-C-P-U' 
+2022-04-07 18:13:25,884 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-3] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:13:25,884 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-3] Writing [hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@4f4c1119]
+2022-04-07 18:13:25,886 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Completed 200 OK
+2022-04-07 18:13:25,887 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-3] {"timestamp":1649348005.869369000,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware/385-C-P-U","headers":{"postman-token":["32e42e1b-ce0d-4332-8e9f-9b530e610f79"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:13:25 GMT"],"Content-Type":["application/json"]}},"timeTaken":17}
+2022-04-07 18:13:35,301 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] PUT "/hardware/editItem/385-C-P-U", parameters={}
+2022-04-07 18:13:35,303 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateHardware(String, HardwareCommand)
+2022-04-07 18:13:35,370 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.HardwareCommand@11619a33]
+2022-04-07 18:13:35,438 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Failed to complete request: java.util.NoSuchElementException: No value present
+2022-04-07 18:13:35,441 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-4] {"timestamp":1649348015.301704100,"principal":null,"session":null,"request":{"method":"PUT","uri":"http://localhost:8080/hardware/editItem/385-C-P-U","headers":{"content-length":["117"],"postman-token":["8c53bf67-991a-4927-88db-f22a5f4eac69"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":500,"headers":{}},"timeTaken":140}
+2022-04-07 18:13:35,446 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at hr.tvz.bekavac.hardwareapp.impl.HardwareRepositoryImpl.updateHardware(HardwareRepositoryImpl.java:53)
+	at hr.tvz.bekavac.hardwareapp.service.HardwareServiceImpl.updateHardware(HardwareServiceImpl.java:63)
+	at hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateHardware(HardwareController.java:45)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-04-07 18:13:35,450 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] "ERROR" dispatch for PUT "/error", parameters={}
+2022-04-07 18:13:35,452 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:13:35,455 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-4] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:13:35,456 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] Writing [{timestamp=Thu Apr 07 18:13:35 CEST 2022, status=500, error=Internal Server Error, message=No value  (truncated)...]
+2022-04-07 18:13:35,462 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Exiting from "ERROR" dispatch, status 500
+2022-04-07 18:13:45,747 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] POST "/hardware/addItem", parameters={}
+2022-04-07 18:13:45,751 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-6] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#addHardware(HardwareCommand)
+2022-04-07 18:13:45,753 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.HardwareCommand@6c9973ef]
+2022-04-07 18:13:45,756 INFO h.t.b.h.impl.HardwareRepositoryImpl [http-nio-8080-exec-6] Adding hardware to list
+2022-04-07 18:13:45,758 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-6] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:13:45,759 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] Writing [hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@23639a37]
+2022-04-07 18:13:45,760 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-6] Completed 201 CREATED
+2022-04-07 18:13:45,762 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-6] {"timestamp":1649348025.747941400,"principal":null,"session":null,"request":{"method":"POST","uri":"http://localhost:8080/hardware/addItem","headers":{"content-length":["119"],"postman-token":["4c648df6-3460-461a-95fc-a57cbbeed226"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":201,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:13:45 GMT"],"Content-Type":["application/json"]}},"timeTaken":13}
+2022-04-07 18:13:49,859 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-7] GET "/hardware/385-C-P-U", parameters={}
+2022-04-07 18:13:49,861 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-7] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getByCode(String)
+2022-04-07 18:13:49,861 INFO h.t.b.h.impl.HardwareRepositoryImpl [http-nio-8080-exec-7] Finding hardware with code '385-C-P-U' 
+2022-04-07 18:13:49,862 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-7] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:13:49,862 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-7] Writing [hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@6f66b3a4]
+2022-04-07 18:13:49,863 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-7] Completed 200 OK
+2022-04-07 18:13:49,864 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-7] {"timestamp":1649348029.859338500,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware/385-C-P-U","headers":{"postman-token":["d0ed28a8-db13-476e-a65e-393efb401471"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:13:49 GMT"],"Content-Type":["application/json"]}},"timeTaken":4}
+2022-04-07 18:13:54,053 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-8] GET "/hardware", parameters={}
+2022-04-07 18:13:54,054 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-8] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:13:54,056 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-8] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:13:54,056 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-8] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@69ccab79, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@670 (truncated)...]
+2022-04-07 18:13:54,058 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-8] Completed 200 OK
+2022-04-07 18:13:54,059 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-8] {"timestamp":1649348034.053952700,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["f4f07a6a-9b1d-4b27-9419-e071c80eed0f"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:13:54 GMT"],"Content-Type":["application/json"]}},"timeTaken":6}
+2022-04-07 18:15:41,879 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-1] PUT "/hardware/editItem/385-C-P-U", parameters={}
+2022-04-07 18:15:41,883 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateHardware(String, HardwareCommand)
+2022-04-07 18:15:41,885 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-1] Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.HardwareCommand@1bb953f0]
+2022-04-07 18:15:41,887 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Failed to complete request: java.util.NoSuchElementException: No value present
+2022-04-07 18:15:41,888 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-1] {"timestamp":1649348141.879898600,"principal":null,"session":null,"request":{"method":"PUT","uri":"http://localhost:8080/hardware/editItem/385-C-P-U","headers":{"content-length":["117"],"postman-token":["0c2a680e-1087-4c7a-b8aa-dc28a9b3dcb8"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":500,"headers":{}},"timeTaken":7}
+2022-04-07 18:15:41,889 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at hr.tvz.bekavac.hardwareapp.impl.HardwareRepositoryImpl.updateHardware(HardwareRepositoryImpl.java:53)
+	at hr.tvz.bekavac.hardwareapp.service.HardwareServiceImpl.updateHardware(HardwareServiceImpl.java:63)
+	at hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateHardware(HardwareController.java:45)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-04-07 18:15:41,892 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-1] "ERROR" dispatch for PUT "/error", parameters={}
+2022-04-07 18:15:41,893 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:15:41,894 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-1] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:15:41,895 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-1] Writing [{timestamp=Thu Apr 07 18:15:41 CEST 2022, status=500, error=Internal Server Error, message=No value  (truncated)...]
+2022-04-07 18:15:41,903 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Exiting from "ERROR" dispatch, status 500
+2022-04-07 18:16:07,557 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-3] PUT "/hardware/editItem/385-C-P-U", parameters={}
+2022-04-07 18:16:07,558 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateHardware(String, HardwareCommand)
+2022-04-07 18:16:07,559 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-3] Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.HardwareCommand@4cba9a4]
+2022-04-07 18:16:07,560 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Failed to complete request: java.util.NoSuchElementException: No value present
+2022-04-07 18:16:07,561 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-3] {"timestamp":1649348167.557270800,"principal":null,"session":null,"request":{"method":"PUT","uri":"http://localhost:8080/hardware/editItem/385-C-P-U","headers":{"content-length":["117"],"postman-token":["a4d32a9b-7f57-4c12-9d62-34c28fdf3385"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":500,"headers":{}},"timeTaken":3}
+2022-04-07 18:16:07,562 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at hr.tvz.bekavac.hardwareapp.impl.HardwareRepositoryImpl.updateHardware(HardwareRepositoryImpl.java:53)
+	at hr.tvz.bekavac.hardwareapp.service.HardwareServiceImpl.updateHardware(HardwareServiceImpl.java:63)
+	at hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateHardware(HardwareController.java:45)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-04-07 18:16:07,563 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-3] "ERROR" dispatch for PUT "/error", parameters={}
+2022-04-07 18:16:07,564 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:16:07,565 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-3] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:16:07,566 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-3] Writing [{timestamp=Thu Apr 07 18:16:07 CEST 2022, status=500, error=Internal Server Error, message=No value  (truncated)...]
+2022-04-07 18:16:07,567 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Exiting from "ERROR" dispatch, status 500
+2022-04-07 18:16:50,735 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-5] POST "/hardware/addItem", parameters={}
+2022-04-07 18:16:50,736 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-5] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#addHardware(HardwareCommand)
+2022-04-07 18:16:50,737 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-5] Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.HardwareCommand@7fe177a]
+2022-04-07 18:16:50,738 INFO h.t.b.h.impl.HardwareRepositoryImpl [http-nio-8080-exec-5] Adding hardware to list
+2022-04-07 18:16:50,739 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-5] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:16:50,740 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-5] Writing [hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@939f9f5]
+2022-04-07 18:16:50,741 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-5] Completed 201 CREATED
+2022-04-07 18:16:50,742 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-5] {"timestamp":1649348210.735780400,"principal":null,"session":null,"request":{"method":"POST","uri":"http://localhost:8080/hardware/addItem","headers":{"content-length":["128"],"postman-token":["51b29967-f54c-4055-9688-bda91eea35bf"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":201,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:16:50 GMT"],"Content-Type":["application/json"]}},"timeTaken":6}
+2022-04-07 18:16:55,052 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] GET "/hardware", parameters={}
+2022-04-07 18:16:55,053 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-6] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:16:55,054 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-6] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:16:55,054 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@44293bf, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@120a (truncated)...]
+2022-04-07 18:16:55,056 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-6] Completed 200 OK
+2022-04-07 18:16:55,057 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-6] {"timestamp":1649348215.052184500,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["c293efa2-b33b-44f5-95da-43f8feed2278"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:16:55 GMT"],"Content-Type":["application/json"]}},"timeTaken":4}
+2022-04-07 18:17:20,624 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-7] DELETE "/hardware/deleteItem/3231-OTHER%2062", parameters={}
+2022-04-07 18:17:20,626 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-7] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#deleteHardware(String)
+2022-04-07 18:17:20,628 INFO h.t.b.h.impl.HardwareRepositoryImpl [http-nio-8080-exec-7] Hardware item 3231-OTHER 62 doesn't exist to delete
+2022-04-07 18:17:20,629 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-7] Completed 204 NO_CONTENT
+2022-04-07 18:17:20,630 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-7] {"timestamp":1649348240.624824500,"principal":null,"session":null,"request":{"method":"DELETE","uri":"http://localhost:8080/hardware/deleteItem/3231-OTHER%2062","headers":{"postman-token":["87b83fe9-6f41-4230-9683-955076e7cb3e"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":204,"headers":{}},"timeTaken":5}
+2022-04-07 18:17:24,037 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-8] GET "/hardware", parameters={}
+2022-04-07 18:17:24,038 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-8] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:17:24,040 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-8] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:17:24,040 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-8] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@2aadb2d7, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@17d (truncated)...]
+2022-04-07 18:17:24,043 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-8] Completed 200 OK
+2022-04-07 18:17:24,046 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-8] {"timestamp":1649348244.037657500,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["da283ac9-f0fd-4adb-b79b-e2a6c16327e5"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:17:24 GMT"],"Content-Type":["application/json"]}},"timeTaken":7}
+2022-04-07 18:17:28,449 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-9] GET "/hardware", parameters={}
+2022-04-07 18:17:28,450 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-9] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:17:28,450 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-9] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:17:28,451 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-9] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@50eca086, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@5e2 (truncated)...]
+2022-04-07 18:17:28,452 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-9] Completed 200 OK
+2022-04-07 18:17:28,453 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-9] {"timestamp":1649348248.449556500,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["ed789742-5563-41f6-be7c-da2ec55d6d3e"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:17:28 GMT"],"Content-Type":["application/json"]}},"timeTaken":4}
+2022-04-07 18:17:43,496 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-10] GET "/hardware", parameters={}
+2022-04-07 18:17:43,498 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-10] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:17:43,499 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-10] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:17:43,500 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-10] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@61147233, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@6fd (truncated)...]
+2022-04-07 18:17:43,502 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Completed 200 OK
+2022-04-07 18:17:43,514 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-10] {"timestamp":1649348263.496077600,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["f2c16dcc-8727-4ddb-a220-e5de31c7353a"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:17:43 GMT"],"Content-Type":["application/json"]}},"timeTaken":16}
+2022-04-07 18:18:37,114 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-1] DELETE "/hardware/deleteItem/3385-C-P-U", parameters={}
+2022-04-07 18:18:37,115 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#deleteHardware(String)
+2022-04-07 18:18:37,115 INFO h.t.b.h.impl.HardwareRepositoryImpl [http-nio-8080-exec-1] Hardware item 3385-C-P-U doesn't exist to delete
+2022-04-07 18:18:37,116 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed 204 NO_CONTENT
+2022-04-07 18:18:37,116 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-1] {"timestamp":1649348317.114244700,"principal":null,"session":null,"request":{"method":"DELETE","uri":"http://localhost:8080/hardware/deleteItem/3385-C-P-U","headers":{"postman-token":["d1eb5bf0-10fc-43de-af91-48ac0447f301"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":204,"headers":{}},"timeTaken":2}
+2022-04-07 18:18:41,371 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] GET "/hardware", parameters={}
+2022-04-07 18:18:41,372 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:18:41,374 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-2] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:18:41,377 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@1b683c72, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@282 (truncated)...]
+2022-04-07 18:18:41,379 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed 200 OK
+2022-04-07 18:18:41,383 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-2] {"timestamp":1649348321.371325200,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["7f0037bf-9760-4015-b712-cde3044487cc"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:18:41 GMT"],"Content-Type":["application/json"]}},"timeTaken":9}
+2022-04-07 18:18:49,086 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-3] GET "/hardware", parameters={}
+2022-04-07 18:18:49,088 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:18:49,092 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-3] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:18:49,093 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-3] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@32f93632, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@68c (truncated)...]
+2022-04-07 18:18:49,095 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Completed 200 OK
+2022-04-07 18:18:49,097 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-3] {"timestamp":1649348329.086060100,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["ac5b1a45-894e-4bb9-82f9-71f9a8769c38"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:18:49 GMT"],"Content-Type":["application/json"]}},"timeTaken":10}
+2022-04-07 18:19:46,088 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] DELETE "/hardware/deleteItem/3385-C-P-U", parameters={}
+2022-04-07 18:19:46,089 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#deleteHardware(String)
+2022-04-07 18:19:46,090 INFO h.t.b.h.impl.HardwareRepositoryImpl [http-nio-8080-exec-4] Hardware item 3385-C-P-U doesn't exist to delete
+2022-04-07 18:19:46,091 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Completed 204 NO_CONTENT
+2022-04-07 18:19:46,091 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-4] {"timestamp":1649348386.088462300,"principal":null,"session":null,"request":{"method":"DELETE","uri":"http://localhost:8080/hardware/deleteItem/3385-C-P-U","headers":{"postman-token":["2d18ddde-e725-4c19-9968-1fb40d86b2e3"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":204,"headers":{}},"timeTaken":2}
+2022-04-07 18:20:20,490 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-5] DELETE "/hardware/deleteItem/385-C-P-U", parameters={}
+2022-04-07 18:20:20,491 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-5] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#deleteHardware(String)
+2022-04-07 18:20:20,492 INFO h.t.b.h.impl.HardwareRepositoryImpl [http-nio-8080-exec-5] Deleting hardvare 385-C-P-U
+2022-04-07 18:20:20,493 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-5] Completed 204 NO_CONTENT
+2022-04-07 18:20:20,495 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-5] {"timestamp":1649348420.490023000,"principal":null,"session":null,"request":{"method":"DELETE","uri":"http://localhost:8080/hardware/deleteItem/385-C-P-U","headers":{"postman-token":["b0bca026-3a0a-4daf-a43d-bba004620e0f"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":204,"headers":{}},"timeTaken":2}
+2022-04-07 18:20:24,165 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] GET "/hardware", parameters={}
+2022-04-07 18:20:24,166 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-6] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:20:24,168 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-6] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:20:24,168 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@1824d188, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@570 (truncated)...]
+2022-04-07 18:20:24,170 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-6] Completed 200 OK
+2022-04-07 18:20:24,171 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-6] {"timestamp":1649348424.165884800,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["1d35efeb-2faf-484a-a48d-c1171e920a6b"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:20:24 GMT"],"Content-Type":["application/json"]}},"timeTaken":4}
+2022-04-07 18:20:46,507 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-7] DELETE "/hardware/deleteItem/3385-STORAGE", parameters={}
+2022-04-07 18:20:46,508 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-7] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#deleteHardware(String)
+2022-04-07 18:20:46,509 INFO h.t.b.h.impl.HardwareRepositoryImpl [http-nio-8080-exec-7] Hardware item 3385-STORAGE doesn't exist to delete
+2022-04-07 18:20:46,509 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-7] Completed 204 NO_CONTENT
+2022-04-07 18:20:46,510 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-7] {"timestamp":1649348446.507345500,"principal":null,"session":null,"request":{"method":"DELETE","uri":"http://localhost:8080/hardware/deleteItem/3385-STORAGE","headers":{"postman-token":["b14ec0b3-99de-4e8f-a7e8-34bd058c53fe"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":204,"headers":{}},"timeTaken":3}
+2022-04-07 18:20:49,702 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-8] GET "/hardware", parameters={}
+2022-04-07 18:20:49,704 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-8] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:20:49,705 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-8] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:20:49,705 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-8] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@435610e9, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@49a (truncated)...]
+2022-04-07 18:20:49,707 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-8] Completed 200 OK
+2022-04-07 18:20:49,708 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-8] {"timestamp":1649348449.702303400,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["fba4783c-33c6-469f-a185-b846196beefb"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:20:49 GMT"],"Content-Type":["application/json"]}},"timeTaken":4}
+2022-04-07 18:20:58,421 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-9] DELETE "/hardware/deleteItem/385-STORAGE", parameters={}
+2022-04-07 18:20:58,422 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-9] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#deleteHardware(String)
+2022-04-07 18:20:58,423 INFO h.t.b.h.impl.HardwareRepositoryImpl [http-nio-8080-exec-9] Deleting hardvare 385-STORAGE
+2022-04-07 18:20:58,423 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-9] Completed 204 NO_CONTENT
+2022-04-07 18:20:58,425 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-9] {"timestamp":1649348458.421842700,"principal":null,"session":null,"request":{"method":"DELETE","uri":"http://localhost:8080/hardware/deleteItem/385-STORAGE","headers":{"postman-token":["ad2a71fa-05c0-40c5-91e9-a0653a89d6d9"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":204,"headers":{}},"timeTaken":3}
+2022-04-07 18:21:02,070 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-10] GET "/hardware", parameters={}
+2022-04-07 18:21:02,071 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-10] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:21:02,075 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-10] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:21:02,076 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-10] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@1f8a3522, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@14a (truncated)...]
+2022-04-07 18:21:02,077 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Completed 200 OK
+2022-04-07 18:21:02,078 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-10] {"timestamp":1649348462.069391300,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["4c6938c2-672b-4b0f-bf7d-6d60258c21cf"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:21:02 GMT"],"Content-Type":["application/json"]}},"timeTaken":8}
+2022-04-07 18:22:56,840 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-3] DELETE "/hardware/deleteItem/231-OTHER%2062", parameters={}
+2022-04-07 18:22:56,841 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#deleteHardware(String)
+2022-04-07 18:22:56,842 INFO h.t.b.h.impl.HardwareRepositoryImpl [http-nio-8080-exec-3] Deleting hardvare 231-OTHER 62
+2022-04-07 18:22:56,842 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Completed 204 NO_CONTENT
+2022-04-07 18:22:56,843 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-3] {"timestamp":1649348576.840006500,"principal":null,"session":null,"request":{"method":"DELETE","uri":"http://localhost:8080/hardware/deleteItem/231-OTHER%2062","headers":{"postman-token":["31cadf39-47df-4eec-89d2-abc24d4c85b9"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":204,"headers":{}},"timeTaken":2}
+2022-04-07 18:23:00,502 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] GET "/hardware", parameters={}
+2022-04-07 18:23:00,504 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:23:00,505 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-4] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:23:00,510 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@3c1c796b, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@487 (truncated)...]
+2022-04-07 18:23:00,511 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Completed 200 OK
+2022-04-07 18:23:00,513 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-4] {"timestamp":1649348580.502311100,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["9f51d498-82e5-4160-820c-59d8195fc4a3"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:23:00 GMT"],"Content-Type":["application/json"]}},"timeTaken":10}
+2022-04-07 18:35:18,730 INFO o.h.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.2.Final
+2022-04-07 18:35:18,761 INFO o.s.boot.StartupInfoLogger [main] Starting HardwareAppApplication using Java 17.0.1 on DESKTOP-BEMQGGH with PID 12384 (C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt)
+2022-04-07 18:35:18,763 INFO o.s.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-04-07 18:35:20,293 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-04-07 18:35:20,301 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:35:20,302 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-04-07 18:35:20,303 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-07 18:35:20,381 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-04-07 18:35:20,382 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1535 ms
+2022-04-07 18:35:20,740 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-04-07 18:35:20,809 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 8 mappings in 'requestMappingHandlerMapping'
+2022-04-07 18:35:20,841 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-04-07 18:35:20,849 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-04-07 18:35:21,005 INFO o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-07 18:35:21,037 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:35:21,085 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-07 18:35:21,105 INFO o.s.boot.StartupInfoLogger [main] Started HardwareAppApplication in 3.176 seconds (JVM running for 5.568)
+2022-04-07 18:35:40,137 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-07 18:35:40,138 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2022-04-07 18:35:40,138 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected StandardServletMultipartResolver
+2022-04-07 18:35:40,138 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected AcceptHeaderLocaleResolver
+2022-04-07 18:35:40,138 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected FixedThemeResolver
+2022-04-07 18:35:40,139 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@48fab9c1
+2022-04-07 18:35:40,141 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.support.SessionFlashMapManager@24b88de9
+2022-04-07 18:35:40,142 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-04-07 18:35:40,143 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 5 ms
+2022-04-07 18:35:40,154 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] GET "/hardware", parameters={}
+2022-04-07 18:35:40,163 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:35:40,189 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-2] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:35:40,189 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@17ab000a, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@741 (truncated)...]
+2022-04-07 18:35:40,243 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed 200 OK
+2022-04-07 18:35:40,270 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-2] {"timestamp":1649349340.151043900,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["f518b020-219f-41b5-b1f7-f4bba26c151e"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:35:40 GMT"],"Content-Type":["application/json"]}},"timeTaken":97}
+2022-04-07 18:36:34,964 INFO o.h.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.2.Final
+2022-04-07 18:36:35,015 INFO o.s.boot.StartupInfoLogger [main] Starting HardwareAppApplication using Java 17.0.1 on DESKTOP-BEMQGGH with PID 13404 (C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt)
+2022-04-07 18:36:35,019 INFO o.s.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-04-07 18:36:38,233 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-04-07 18:36:38,264 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:36:38,271 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-04-07 18:36:38,284 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-07 18:36:38,486 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-04-07 18:36:38,487 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3188 ms
+2022-04-07 18:36:39,550 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-04-07 18:36:39,626 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 8 mappings in 'requestMappingHandlerMapping'
+2022-04-07 18:36:39,703 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-04-07 18:36:39,716 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-04-07 18:36:39,990 INFO o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-07 18:36:40,036 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:36:40,108 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-07 18:36:40,137 INFO o.s.boot.StartupInfoLogger [main] Started HardwareAppApplication in 5.911 seconds (JVM running for 9.339)
+2022-04-07 18:36:49,549 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-07 18:36:49,550 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2022-04-07 18:36:49,550 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected StandardServletMultipartResolver
+2022-04-07 18:36:49,551 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected AcceptHeaderLocaleResolver
+2022-04-07 18:36:49,551 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected FixedThemeResolver
+2022-04-07 18:36:49,552 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@57f04d1e
+2022-04-07 18:36:49,552 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.support.SessionFlashMapManager@43cf1e23
+2022-04-07 18:36:49,553 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-04-07 18:36:49,553 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 3 ms
+2022-04-07 18:36:49,570 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] GET "/hardware", parameters={}
+2022-04-07 18:36:49,583 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:37:04,054 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-2] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:37:04,059 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@16c789e3, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@5f3 (truncated)...]
+2022-04-07 18:37:04,140 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed 200 OK
+2022-04-07 18:37:04,186 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-2] {"timestamp":1649349409.566046400,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["a4a4f8c1-af88-4c12-90f5-8b7ebbcc9bfe"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:37:04 GMT"],"Content-Type":["application/json"]}},"timeTaken":14582}
+2022-04-07 18:37:14,649 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 18:37:14,651 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 18:37:14,720 DEBUG o.s.w.m.s.InvocableHandlerMethod [http-nio-8080-exec-4] Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<hr.tvz.bekavac.hardwareapp.dto.HardwareDTO> hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateOnStorage(java.lang.String,hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage): JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]
+2022-04-07 18:37:14,725 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-4] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]]
+2022-04-07 18:37:14,726 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Completed 400 BAD_REQUEST
+2022-04-07 18:37:14,727 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-4] {"timestamp":1649349434.649367000,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["25"],"postman-token":["2de5d00f-78f3-49cb-aedd-411747a8e0e1"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":400,"headers":{}},"timeTaken":77}
+2022-04-07 18:37:14,731 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] "ERROR" dispatch for PATCH "/error", parameters={}
+2022-04-07 18:37:14,733 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:37:14,738 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-4] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:37:14,738 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] Writing [{timestamp=Thu Apr 07 18:37:14 CEST 2022, status=400, error=Bad Request, message=JSON parse error: C (truncated)...]
+2022-04-07 18:37:14,743 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Exiting from "ERROR" dispatch, status 400
+2022-04-07 18:38:38,241 INFO o.h.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.2.Final
+2022-04-07 18:38:38,249 INFO o.s.boot.StartupInfoLogger [main] Starting HardwareAppApplication using Java 17.0.1 on DESKTOP-BEMQGGH with PID 15512 (C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt)
+2022-04-07 18:38:38,251 INFO o.s.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-04-07 18:38:40,242 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-04-07 18:38:40,255 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:38:40,256 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-04-07 18:38:40,257 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-07 18:38:40,359 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-04-07 18:38:40,360 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1952 ms
+2022-04-07 18:38:40,916 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-04-07 18:38:41,017 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 8 mappings in 'requestMappingHandlerMapping'
+2022-04-07 18:38:41,063 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-04-07 18:38:41,078 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-04-07 18:38:41,310 INFO o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-07 18:38:41,354 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:38:41,421 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-07 18:38:41,446 INFO o.s.boot.StartupInfoLogger [main] Started HardwareAppApplication in 3.847 seconds (JVM running for 7.411)
+2022-04-07 18:38:49,316 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-07 18:38:49,316 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2022-04-07 18:38:49,317 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected StandardServletMultipartResolver
+2022-04-07 18:38:49,317 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected AcceptHeaderLocaleResolver
+2022-04-07 18:38:49,318 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected FixedThemeResolver
+2022-04-07 18:38:49,319 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3e21bc95
+2022-04-07 18:38:49,320 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.support.SessionFlashMapManager@17b98fd4
+2022-04-07 18:38:49,321 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-04-07 18:38:49,321 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 4 ms
+2022-04-07 18:38:49,339 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 18:38:49,352 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 18:38:49,469 DEBUG o.s.w.m.s.InvocableHandlerMethod [http-nio-8080-exec-2] Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<hr.tvz.bekavac.hardwareapp.dto.HardwareDTO> hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateOnStorage(java.lang.String,hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage): JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]
+2022-04-07 18:38:49,475 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-2] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]]
+2022-04-07 18:38:49,475 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed 400 BAD_REQUEST
+2022-04-07 18:38:49,526 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-2] {"timestamp":1649349529.335232000,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["25"],"postman-token":["606dad71-7eb0-4491-8a20-c2b169c18ee6"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":400,"headers":{}},"timeTaken":144}
+2022-04-07 18:38:49,562 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] "ERROR" dispatch for PATCH "/error", parameters={}
+2022-04-07 18:38:49,575 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:38:49,752 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-2] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:38:49,753 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] Writing [{timestamp=Thu Apr 07 18:38:49 CEST 2022, status=400, error=Bad Request, message=JSON parse error: C (truncated)...]
+2022-04-07 18:38:49,837 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Exiting from "ERROR" dispatch, status 400
+2022-04-07 18:39:38,682 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 18:39:38,683 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 18:39:38,684 DEBUG o.s.w.m.s.InvocableHandlerMethod [http-nio-8080-exec-4] Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<hr.tvz.bekavac.hardwareapp.dto.HardwareDTO> hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateOnStorage(java.lang.String,hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage): JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]
+2022-04-07 18:39:38,685 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-4] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]]
+2022-04-07 18:39:38,686 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Completed 400 BAD_REQUEST
+2022-04-07 18:39:38,686 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-4] {"timestamp":1649349578.681794500,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["25"],"postman-token":["7366e6c4-3698-48de-99f5-ebe6059fb9f3"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":400,"headers":{}},"timeTaken":4}
+2022-04-07 18:39:38,687 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] "ERROR" dispatch for PATCH "/error", parameters={}
+2022-04-07 18:39:38,691 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:39:38,692 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-4] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:39:38,693 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] Writing [{timestamp=Thu Apr 07 18:39:38 CEST 2022, status=400, error=Bad Request, message=JSON parse error: C (truncated)...]
+2022-04-07 18:39:38,694 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Exiting from "ERROR" dispatch, status 400
+2022-04-07 18:40:00,991 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-5] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 18:40:00,993 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-5] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 18:40:00,996 DEBUG o.s.w.m.s.InvocableHandlerMethod [http-nio-8080-exec-5] Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<hr.tvz.bekavac.hardwareapp.dto.HardwareDTO> hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateOnStorage(java.lang.String,hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage): JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]
+2022-04-07 18:40:00,998 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-5] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]]
+2022-04-07 18:40:01,000 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-5] Completed 400 BAD_REQUEST
+2022-04-07 18:40:01,003 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-5] {"timestamp":1649349600.990204400,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["25"],"postman-token":["d28f566d-77a5-446d-8b6d-9c194f860e72"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":400,"headers":{}},"timeTaken":12}
+2022-04-07 18:40:01,005 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-5] "ERROR" dispatch for PATCH "/error", parameters={}
+2022-04-07 18:40:01,007 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-5] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:40:01,009 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-5] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:40:01,010 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-5] Writing [{timestamp=Thu Apr 07 18:40:01 CEST 2022, status=400, error=Bad Request, message=JSON parse error: C (truncated)...]
+2022-04-07 18:40:01,014 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-5] Exiting from "ERROR" dispatch, status 400
+2022-04-07 18:41:33,205 INFO o.h.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.2.Final
+2022-04-07 18:41:33,204 INFO o.s.boot.StartupInfoLogger [main] Starting HardwareAppApplication using Java 17.0.1 on DESKTOP-BEMQGGH with PID 15024 (C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt)
+2022-04-07 18:41:33,210 INFO o.s.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-04-07 18:41:35,584 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-04-07 18:41:35,600 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:41:35,602 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-04-07 18:41:35,604 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-07 18:41:35,738 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-04-07 18:41:35,739 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2367 ms
+2022-04-07 18:41:36,312 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-04-07 18:41:36,395 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 8 mappings in 'requestMappingHandlerMapping'
+2022-04-07 18:41:36,443 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-04-07 18:41:36,453 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-04-07 18:41:36,658 INFO o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-07 18:41:36,694 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:41:36,753 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-07 18:41:36,780 INFO o.s.boot.StartupInfoLogger [main] Started HardwareAppApplication in 5.387 seconds (JVM running for 10.581)
+2022-04-07 18:41:41,933 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-07 18:41:41,933 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2022-04-07 18:41:41,934 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected StandardServletMultipartResolver
+2022-04-07 18:41:41,935 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected AcceptHeaderLocaleResolver
+2022-04-07 18:41:41,935 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected FixedThemeResolver
+2022-04-07 18:41:41,936 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@690d8ed4
+2022-04-07 18:41:41,937 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.support.SessionFlashMapManager@78e24ff8
+2022-04-07 18:41:41,937 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-04-07 18:41:41,938 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 3 ms
+2022-04-07 18:41:41,966 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 18:41:41,976 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 18:41:42,083 DEBUG o.s.w.m.s.InvocableHandlerMethod [http-nio-8080-exec-2] Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<hr.tvz.bekavac.hardwareapp.dto.HardwareDTO> hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateOnStorage(java.lang.String,hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage): JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]
+2022-04-07 18:41:42,088 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-2] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]]
+2022-04-07 18:41:42,089 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed 400 BAD_REQUEST
+2022-04-07 18:41:42,136 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-2] {"timestamp":1649349701.963771800,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["25"],"postman-token":["ee8a82a3-0639-4b76-94ff-9c1efe3f1a4a"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":400,"headers":{}},"timeTaken":130}
+2022-04-07 18:41:42,154 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] "ERROR" dispatch for PATCH "/error", parameters={}
+2022-04-07 18:41:42,158 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:41:42,183 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-2] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:41:42,185 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] Writing [{timestamp=Thu Apr 07 18:41:42 CEST 2022, status=400, error=Bad Request, message=JSON parse error: C (truncated)...]
+2022-04-07 18:41:42,221 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Exiting from "ERROR" dispatch, status 400
+2022-04-07 18:45:03,483 INFO o.s.boot.StartupInfoLogger [main] Starting HardwareAppApplication using Java 17.0.1 on DESKTOP-BEMQGGH with PID 2944 (C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt)
+2022-04-07 18:45:03,484 INFO o.h.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.2.Final
+2022-04-07 18:45:03,489 INFO o.s.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-04-07 18:45:05,123 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-04-07 18:45:05,134 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:45:05,134 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-04-07 18:45:05,135 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-07 18:45:05,225 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-04-07 18:45:05,226 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1661 ms
+2022-04-07 18:45:05,688 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-04-07 18:45:05,764 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 8 mappings in 'requestMappingHandlerMapping'
+2022-04-07 18:45:05,801 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-04-07 18:45:05,811 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-04-07 18:45:06,009 INFO o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-07 18:45:06,047 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:45:06,107 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-07 18:45:06,129 INFO o.s.boot.StartupInfoLogger [main] Started HardwareAppApplication in 3.6 seconds (JVM running for 5.851)
+2022-04-07 18:45:11,577 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-07 18:45:11,578 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-04-07 18:45:11,579 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Detected StandardServletMultipartResolver
+2022-04-07 18:45:11,579 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Detected AcceptHeaderLocaleResolver
+2022-04-07 18:45:11,580 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Detected FixedThemeResolver
+2022-04-07 18:45:11,581 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@19ad035
+2022-04-07 18:45:11,583 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Detected org.springframework.web.servlet.support.SessionFlashMapManager@4fae08e8
+2022-04-07 18:45:11,584 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-04-07 18:45:11,585 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 7 ms
+2022-04-07 18:45:11,601 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-1] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 18:45:11,613 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 18:45:11,710 DEBUG o.s.w.m.s.InvocableHandlerMethod [http-nio-8080-exec-1] Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<hr.tvz.bekavac.hardwareapp.dto.HardwareDTO> hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateOnStorage(java.lang.String,hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage): JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]
+2022-04-07 18:45:11,716 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]]
+2022-04-07 18:45:11,716 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed 400 BAD_REQUEST
+2022-04-07 18:45:11,758 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-1] {"timestamp":1649349911.598945100,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["25"],"postman-token":["20fdbc49-b8d2-4055-b31e-ee2013d5d297"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":400,"headers":{}},"timeTaken":122}
+2022-04-07 18:45:11,768 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-1] "ERROR" dispatch for PATCH "/error", parameters={}
+2022-04-07 18:45:11,770 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:45:11,780 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-1] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:45:11,781 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-1] Writing [{timestamp=Thu Apr 07 18:45:11 CEST 2022, status=400, error=Bad Request, message=JSON parse error: C (truncated)...]
+2022-04-07 18:45:11,806 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Exiting from "ERROR" dispatch, status 400
+2022-04-07 18:47:54,846 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] PUT "/hardware/editItem/385-C-P-U", parameters={}
+2022-04-07 18:47:54,847 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateHardware(String, HardwareCommand)
+2022-04-07 18:47:54,862 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.HardwareCommand@781d57e5]
+2022-04-07 18:47:54,940 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Failed to complete request: java.util.NoSuchElementException: No value present
+2022-04-07 18:47:54,943 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-4] {"timestamp":1649350074.846924900,"principal":null,"session":null,"request":{"method":"PUT","uri":"http://localhost:8080/hardware/editItem/385-C-P-U","headers":{"content-length":["117"],"postman-token":["ea89ce5b-31bf-4a5e-9d97-034c06de0280"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":500,"headers":{}},"timeTaken":96}
+2022-04-07 18:47:54,948 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at hr.tvz.bekavac.hardwareapp.impl.HardwareRepositoryImpl.updateHardware(HardwareRepositoryImpl.java:53)
+	at hr.tvz.bekavac.hardwareapp.service.HardwareServiceImpl.updateHardware(HardwareServiceImpl.java:64)
+	at hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateHardware(HardwareController.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-04-07 18:47:54,949 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] "ERROR" dispatch for PUT "/error", parameters={}
+2022-04-07 18:47:54,950 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:47:54,951 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-4] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:47:54,951 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] Writing [{timestamp=Thu Apr 07 18:47:54 CEST 2022, status=500, error=Internal Server Error, message=No value  (truncated)...]
+2022-04-07 18:47:54,952 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Exiting from "ERROR" dispatch, status 500
+2022-04-07 18:48:09,989 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] PUT "/hardware/editItem/385-C-P-U", parameters={}
+2022-04-07 18:48:09,990 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-6] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateHardware(String, HardwareCommand)
+2022-04-07 18:48:09,991 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.HardwareCommand@6ac41451]
+2022-04-07 18:48:09,995 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-6] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:48:09,996 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] Writing [hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@56500a33]
+2022-04-07 18:48:09,997 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-6] Completed 409 CONFLICT
+2022-04-07 18:48:09,998 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-6] {"timestamp":1649350089.989385400,"principal":null,"session":null,"request":{"method":"PUT","uri":"http://localhost:8080/hardware/editItem/385-C-P-U","headers":{"content-length":["116"],"postman-token":["c041f042-7b33-4fe0-99ea-ede9d1e22e30"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":409,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:48:09 GMT"],"Content-Type":["application/json"]}},"timeTaken":9}
+2022-04-07 18:51:23,377 INFO o.s.boot.StartupInfoLogger [main] Starting HardwareAppApplication using Java 17.0.1 on DESKTOP-BEMQGGH with PID 6340 (C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt)
+2022-04-07 18:51:23,377 INFO o.h.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.2.Final
+2022-04-07 18:51:23,382 INFO o.s.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-04-07 18:51:24,987 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-04-07 18:51:25,015 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:51:25,016 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-04-07 18:51:25,016 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-07 18:51:25,115 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-04-07 18:51:25,116 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1655 ms
+2022-04-07 18:51:25,581 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-04-07 18:51:25,666 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 8 mappings in 'requestMappingHandlerMapping'
+2022-04-07 18:51:25,722 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-04-07 18:51:25,735 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-04-07 18:51:26,007 INFO o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-07 18:51:26,050 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:51:26,116 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-07 18:51:26,144 INFO o.s.boot.StartupInfoLogger [main] Started HardwareAppApplication in 3.543 seconds (JVM running for 5.654)
+2022-04-07 18:51:30,128 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-07 18:51:30,129 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Initializing Servlet 'dispatcherServlet'
+2022-04-07 18:51:30,130 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-3] Detected StandardServletMultipartResolver
+2022-04-07 18:51:30,131 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-3] Detected AcceptHeaderLocaleResolver
+2022-04-07 18:51:30,132 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-3] Detected FixedThemeResolver
+2022-04-07 18:51:30,133 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-3] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2577f0b4
+2022-04-07 18:51:30,134 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-3] Detected org.springframework.web.servlet.support.SessionFlashMapManager@120820bb
+2022-04-07 18:51:30,134 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-3] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-04-07 18:51:30,135 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Completed initialization in 5 ms
+2022-04-07 18:51:30,153 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-3] GET "/hardware", parameters={}
+2022-04-07 18:51:30,168 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:51:36,778 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-3] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:51:36,779 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-3] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@3277d64e, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@7bd (truncated)...]
+2022-04-07 18:51:36,857 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Completed 200 OK
+2022-04-07 18:51:36,892 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-3] {"timestamp":1649350290.150051100,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["d2cd5836-c698-491c-9fba-59525ff3d58f"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:51:36 GMT"],"Content-Type":["application/json"]}},"timeTaken":6713}
+2022-04-07 18:51:42,425 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] PUT "/hardware/editItem/385-C-P-U", parameters={}
+2022-04-07 18:51:42,427 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateHardware(String, HardwareCommand)
+2022-04-07 18:51:42,497 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.HardwareCommand@43a6613]
+2022-04-07 18:51:42,587 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-2] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:51:42,588 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] Writing [hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@2545c153]
+2022-04-07 18:51:42,589 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed 409 CONFLICT
+2022-04-07 18:51:42,591 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-2] {"timestamp":1649350302.425322100,"principal":null,"session":null,"request":{"method":"PUT","uri":"http://localhost:8080/hardware/editItem/385-C-P-U","headers":{"content-length":["116"],"postman-token":["6292b943-5d73-4117-abe7-f335520c4fec"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":409,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:51:42 GMT"],"Content-Type":["application/json"]}},"timeTaken":165}
+2022-04-07 18:51:46,824 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-5] GET "/hardware", parameters={}
+2022-04-07 18:51:46,826 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-5] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:51:50,020 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-5] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:51:50,021 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-5] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@2fb74f66, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@217 (truncated)...]
+2022-04-07 18:51:50,025 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-5] Completed 200 OK
+2022-04-07 18:51:50,035 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-5] {"timestamp":1649350306.824305300,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["5210ee57-fc30-4bc9-8634-b2d4d38f58ac"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:51:50 GMT"],"Content-Type":["application/json"]}},"timeTaken":3210}
+2022-04-07 18:51:55,652 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 18:51:55,654 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 18:51:55,658 DEBUG o.s.w.m.s.InvocableHandlerMethod [http-nio-8080-exec-4] Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<hr.tvz.bekavac.hardwareapp.dto.HardwareDTO> hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateOnStorage(java.lang.String,hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage): JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]
+2022-04-07 18:51:55,665 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-4] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]]
+2022-04-07 18:51:55,666 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Completed 400 BAD_REQUEST
+2022-04-07 18:51:55,667 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-4] {"timestamp":1649350315.652479000,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["25"],"postman-token":["280b14d7-7b24-4cf4-9b47-1e0ef5c8cd1b"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":400,"headers":{}},"timeTaken":14}
+2022-04-07 18:51:55,671 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] "ERROR" dispatch for PATCH "/error", parameters={}
+2022-04-07 18:51:55,673 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:51:55,679 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-4] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:51:55,679 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] Writing [{timestamp=Thu Apr 07 18:51:55 CEST 2022, status=400, error=Bad Request, message=JSON parse error: C (truncated)...]
+2022-04-07 18:51:55,684 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Exiting from "ERROR" dispatch, status 400
+2022-04-07 18:52:55,273 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 18:52:55,275 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-6] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 18:52:55,277 DEBUG o.s.w.m.s.InvocableHandlerMethod [http-nio-8080-exec-6] Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<hr.tvz.bekavac.hardwareapp.dto.HardwareDTO> hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateOnStorage(java.lang.String,hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage): JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]
+2022-04-07 18:52:55,278 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-6] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]]
+2022-04-07 18:52:55,283 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-6] Completed 400 BAD_REQUEST
+2022-04-07 18:52:55,286 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-6] {"timestamp":1649350375.273082000,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["23"],"postman-token":["a128ec3d-77a5-475d-9588-9d9bf464dcc5"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":400,"headers":{}},"timeTaken":10}
+2022-04-07 18:52:55,288 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] "ERROR" dispatch for PATCH "/error", parameters={}
+2022-04-07 18:52:55,290 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-6] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:52:55,292 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-6] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:52:55,293 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] Writing [{timestamp=Thu Apr 07 18:52:55 CEST 2022, status=400, error=Bad Request, message=JSON parse error: C (truncated)...]
+2022-04-07 18:52:55,295 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-6] Exiting from "ERROR" dispatch, status 400
+2022-04-07 18:53:10,575 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-10] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 18:53:10,577 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-10] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 18:53:10,579 DEBUG o.s.w.m.s.InvocableHandlerMethod [http-nio-8080-exec-10] Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<hr.tvz.bekavac.hardwareapp.dto.HardwareDTO> hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateOnStorage(java.lang.String,hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage): JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]
+2022-04-07 18:53:10,580 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-10] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]]
+2022-04-07 18:53:10,581 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Completed 400 BAD_REQUEST
+2022-04-07 18:53:10,582 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-10] {"timestamp":1649350390.575183800,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["23"],"postman-token":["48e3f592-c768-4b5e-91ca-f02009af8665"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":400,"headers":{}},"timeTaken":6}
+2022-04-07 18:53:10,583 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-10] "ERROR" dispatch for PATCH "/error", parameters={}
+2022-04-07 18:53:10,585 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-10] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:53:10,586 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-10] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:53:10,587 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-10] Writing [{timestamp=Thu Apr 07 18:53:10 CEST 2022, status=400, error=Bad Request, message=JSON parse error: C (truncated)...]
+2022-04-07 18:53:10,588 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Exiting from "ERROR" dispatch, status 400
+2022-04-07 18:53:25,920 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-1] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 18:53:25,921 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 18:53:25,923 DEBUG o.s.w.m.s.InvocableHandlerMethod [http-nio-8080-exec-1] Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<hr.tvz.bekavac.hardwareapp.dto.HardwareDTO> hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateOnStorage(java.lang.String,hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage): JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]
+2022-04-07 18:53:25,924 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]]
+2022-04-07 18:53:25,924 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed 400 BAD_REQUEST
+2022-04-07 18:53:25,925 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-1] {"timestamp":1649350405.920794300,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["25"],"postman-token":["a5beb8b7-e488-4c56-a278-11c804c5af13"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":400,"headers":{}},"timeTaken":4}
+2022-04-07 18:53:25,926 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-1] "ERROR" dispatch for PATCH "/error", parameters={}
+2022-04-07 18:53:25,927 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:53:25,927 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-1] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:53:25,928 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-1] Writing [{timestamp=Thu Apr 07 18:53:25 CEST 2022, status=400, error=Bad Request, message=JSON parse error: C (truncated)...]
+2022-04-07 18:53:25,929 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Exiting from "ERROR" dispatch, status 400
+2022-04-07 18:57:35,383 INFO o.h.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.2.Final
+2022-04-07 18:57:35,389 INFO o.s.boot.StartupInfoLogger [main] Starting HardwareAppApplication using Java 17.0.1 on DESKTOP-BEMQGGH with PID 6168 (C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt)
+2022-04-07 18:57:35,393 INFO o.s.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-04-07 18:57:37,436 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-04-07 18:57:37,449 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:57:37,450 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-04-07 18:57:37,451 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-07 18:57:37,553 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-04-07 18:57:37,554 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2067 ms
+2022-04-07 18:57:38,070 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-04-07 18:57:38,148 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 8 mappings in 'requestMappingHandlerMapping'
+2022-04-07 18:57:38,185 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-04-07 18:57:38,195 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-04-07 18:57:38,396 INFO o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-07 18:57:38,435 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:57:38,493 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-07 18:57:38,514 INFO o.s.boot.StartupInfoLogger [main] Started HardwareAppApplication in 3.874 seconds (JVM running for 5.796)
+2022-04-07 18:57:41,866 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-07 18:57:41,867 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2022-04-07 18:57:41,867 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected StandardServletMultipartResolver
+2022-04-07 18:57:41,868 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected AcceptHeaderLocaleResolver
+2022-04-07 18:57:41,868 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected FixedThemeResolver
+2022-04-07 18:57:41,869 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@35867ab
+2022-04-07 18:57:41,870 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.support.SessionFlashMapManager@3afc1493
+2022-04-07 18:57:41,870 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-04-07 18:57:41,870 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 3 ms
+2022-04-07 18:57:41,887 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 18:57:41,898 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 18:57:42,019 DEBUG o.s.w.m.s.InvocableHandlerMethod [http-nio-8080-exec-2] Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<hr.tvz.bekavac.hardwareapp.dto.HardwareDTO> hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateOnStorage(java.lang.String,hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage): JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]
+2022-04-07 18:57:42,026 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-2] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]]
+2022-04-07 18:57:42,026 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed 400 BAD_REQUEST
+2022-04-07 18:57:42,068 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-2] {"timestamp":1649350661.883342500,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["25"],"postman-token":["6d511a3c-dff5-431a-b45c-5b7f87c2ce3b"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":400,"headers":{}},"timeTaken":146}
+2022-04-07 18:57:42,082 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] "ERROR" dispatch for PATCH "/error", parameters={}
+2022-04-07 18:57:42,084 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:57:42,097 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-2] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:57:42,098 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] Writing [{timestamp=Thu Apr 07 18:57:42 CEST 2022, status=400, error=Bad Request, message=JSON parse error: C (truncated)...]
+2022-04-07 18:57:42,118 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Exiting from "ERROR" dispatch, status 400
+2022-04-07 18:58:18,103 INFO o.s.boot.StartupInfoLogger [main] Starting HardwareAppApplication using Java 17.0.1 on DESKTOP-BEMQGGH with PID 9568 (C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt)
+2022-04-07 18:58:18,124 INFO o.s.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-04-07 18:58:18,150 INFO o.h.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.2.Final
+2022-04-07 18:58:20,556 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-04-07 18:58:20,569 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:58:20,570 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-04-07 18:58:20,570 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-07 18:58:20,654 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-04-07 18:58:20,655 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2296 ms
+2022-04-07 18:58:21,244 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-04-07 18:58:21,330 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 8 mappings in 'requestMappingHandlerMapping'
+2022-04-07 18:58:21,374 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-04-07 18:58:21,383 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-04-07 18:58:21,603 INFO o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-07 18:58:21,644 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-07 18:58:21,711 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-07 18:58:21,740 INFO o.s.boot.StartupInfoLogger [main] Started HardwareAppApplication in 5.011 seconds (JVM running for 8.027)
+2022-04-07 18:58:25,016 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-07 18:58:25,016 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2022-04-07 18:58:25,017 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected StandardServletMultipartResolver
+2022-04-07 18:58:25,019 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected AcceptHeaderLocaleResolver
+2022-04-07 18:58:25,019 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected FixedThemeResolver
+2022-04-07 18:58:25,020 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1652df8b
+2022-04-07 18:58:25,020 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.support.SessionFlashMapManager@7075464c
+2022-04-07 18:58:25,021 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-04-07 18:58:25,021 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 5 ms
+2022-04-07 18:58:25,042 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 18:58:25,057 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 18:58:25,173 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage@747767e]
+2022-04-07 18:58:38,247 INFO h.t.b.h.impl.HardwareRepositoryImpl [http-nio-8080-exec-2] Finding hardware with code '385-C-P-U' 
+2022-04-07 18:58:38,281 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-2] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:58:38,282 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] Writing [hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@5fe242f0]
+2022-04-07 18:58:38,302 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed 200 OK
+2022-04-07 18:58:38,335 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-2] {"timestamp":1649350705.037483400,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["25"],"postman-token":["ad745604-045e-4890-8b24-10f2f623d976"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:58:38 GMT"],"Content-Type":["application/json"]}},"timeTaken":13270}
+2022-04-07 18:58:45,910 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-3] GET "/hardware", parameters={}
+2022-04-07 18:58:45,911 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 18:58:54,763 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-3] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:58:54,764 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-3] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@620ad3d8, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@1ad (truncated)...]
+2022-04-07 18:58:54,768 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Completed 200 OK
+2022-04-07 18:58:54,771 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-3] {"timestamp":1649350725.909527900,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["f0e811b6-0e46-4c68-9761-e245ccfeae15"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:58:54 GMT"],"Content-Type":["application/json"]}},"timeTaken":8861}
+2022-04-07 18:59:06,492 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 18:59:06,494 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 18:59:06,495 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage@1b8754fc]
+2022-04-07 18:59:06,517 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-4] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<hr.tvz.bekavac.hardwareapp.dto.HardwareDTO> hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateOnStorage(java.lang.String,hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage): [Field error in object 'updateOnStorage' on field 'onStorage': rejected value [-1]; codes [PositiveOrZero.updateOnStorage.onStorage,PositiveOrZero.onStorage,PositiveOrZero.java.lang.Integer,PositiveOrZero]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [updateOnStorage.onStorage,onStorage]; arguments []; default message [onStorage]]; default message [Number of items on storage must be non-negative]] ]
+2022-04-07 18:59:06,517 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Completed 400 BAD_REQUEST
+2022-04-07 18:59:06,518 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-4] {"timestamp":1649350746.492314900,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["26"],"postman-token":["f79f5178-e668-4674-b28c-b79304a602e4"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":400,"headers":{}},"timeTaken":25}
+2022-04-07 18:59:06,522 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] "ERROR" dispatch for PATCH "/error", parameters={}
+2022-04-07 18:59:06,523 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 18:59:06,527 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-4] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:59:06,528 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-4] Writing [{timestamp=Thu Apr 07 18:59:06 CEST 2022, status=400, error=Bad Request, message=Validation failed f (truncated)...]
+2022-04-07 18:59:06,544 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Exiting from "ERROR" dispatch, status 400
+2022-04-07 18:59:11,925 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 18:59:11,928 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-6] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 18:59:11,929 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage@4835c3ab]
+2022-04-07 18:59:29,600 INFO h.t.b.h.impl.HardwareRepositoryImpl [http-nio-8080-exec-6] Finding hardware with code '385-C-P-U' 
+2022-04-07 18:59:29,605 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-6] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 18:59:29,607 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-6] Writing [hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@46f224dd]
+2022-04-07 18:59:29,610 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-6] Completed 200 OK
+2022-04-07 18:59:29,613 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-6] {"timestamp":1649350751.925957900,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["25"],"postman-token":["904677fe-48d1-445c-b579-054289b80fdb"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 16:59:29 GMT"],"Content-Type":["application/json"]}},"timeTaken":17686}
+2022-04-07 18:59:34,862 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-7] GET "/hardware", parameters={}
+2022-04-07 18:59:34,864 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-7] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#getAllHardware()
+2022-04-07 19:00:27,714 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-7] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 19:00:27,715 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-7] Writing [[hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@70bb148a, hr.tvz.bekavac.hardwareapp.dto.HardwareDTO@7e7 (truncated)...]
+2022-04-07 19:00:27,719 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-7] Completed 200 OK
+2022-04-07 19:00:27,721 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-7] {"timestamp":1649350774.862189800,"principal":null,"session":null,"request":{"method":"GET","uri":"http://localhost:8080/hardware","headers":{"postman-token":["a952466a-4882-4ee4-a492-9d0859aec3e7"],"host":["localhost:8080"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":200,"headers":{"Transfer-Encoding":["chunked"],"Keep-Alive":["timeout=60"],"Connection":["keep-alive"],"Date":["Thu, 07 Apr 2022 17:00:27 GMT"],"Content-Type":["application/json"]}},"timeTaken":52858}
+2022-04-07 19:02:58,662 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-10] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 19:02:58,664 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-10] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 19:02:58,666 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-10] Read "application/json;charset=UTF-8" to [hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage@3fd663b2]
+2022-04-07 19:02:58,668 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-10] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<hr.tvz.bekavac.hardwareapp.dto.HardwareDTO> hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateOnStorage(java.lang.String,hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage): [Field error in object 'updateOnStorage' on field 'onStorage': rejected value [-5]; codes [PositiveOrZero.updateOnStorage.onStorage,PositiveOrZero.onStorage,PositiveOrZero.java.lang.Integer,PositiveOrZero]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [updateOnStorage.onStorage,onStorage]; arguments []; default message [onStorage]]; default message [Number of items on storage must be non-negative]] ]
+2022-04-07 19:02:58,668 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Completed 400 BAD_REQUEST
+2022-04-07 19:02:58,669 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-10] {"timestamp":1649350978.662810300,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["26"],"postman-token":["498d3503-0fc2-4957-b942-67c29c128f37"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":400,"headers":{}},"timeTaken":6}
+2022-04-07 19:02:58,669 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-10] "ERROR" dispatch for PATCH "/error", parameters={}
+2022-04-07 19:02:58,670 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-10] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 19:02:58,671 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-10] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 19:02:58,672 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-10] Writing [{timestamp=Thu Apr 07 19:02:58 CEST 2022, status=400, error=Bad Request, message=Validation failed f (truncated)...]
+2022-04-07 19:02:58,673 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Exiting from "ERROR" dispatch, status 400
+2022-04-07 19:04:08,658 INFO o.h.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.2.Final
+2022-04-07 19:04:08,663 INFO o.s.boot.StartupInfoLogger [main] Starting HardwareAppApplication using Java 17.0.1 on DESKTOP-BEMQGGH with PID 11268 (C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\3 godina\Web aplikacije u Javi\labosi\projekt)
+2022-04-07 19:04:08,667 INFO o.s.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-04-07 19:04:10,138 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-04-07 19:04:10,148 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-07 19:04:10,148 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-04-07 19:04:10,149 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-07 19:04:10,225 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-04-07 19:04:10,226 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1486 ms
+2022-04-07 19:04:10,590 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-04-07 19:04:10,653 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 8 mappings in 'requestMappingHandlerMapping'
+2022-04-07 19:04:10,687 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-04-07 19:04:10,695 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-04-07 19:04:10,852 INFO o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-07 19:04:10,885 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-07 19:04:10,932 INFO o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-07 19:04:10,951 INFO o.s.boot.StartupInfoLogger [main] Started HardwareAppApplication in 2.937 seconds (JVM running for 5.355)
+2022-04-07 19:04:44,775 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-07 19:04:44,776 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2022-04-07 19:04:44,776 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected StandardServletMultipartResolver
+2022-04-07 19:04:44,776 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected AcceptHeaderLocaleResolver
+2022-04-07 19:04:44,777 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected FixedThemeResolver
+2022-04-07 19:04:44,777 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@34ddf6d0
+2022-04-07 19:04:44,778 DEBUG o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.support.SessionFlashMapManager@39e192a8
+2022-04-07 19:04:44,779 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-04-07 19:04:44,779 INFO o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 3 ms
+2022-04-07 19:04:44,792 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] PATCH "/hardware/patchItem/385-C-P-U", parameters={}
+2022-04-07 19:04:44,803 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to hr.tvz.bekavac.hardwareapp.controller.HardwareController#updateOnStorage(String, UpdateOnStorage)
+2022-04-07 19:04:44,884 DEBUG o.s.w.m.s.InvocableHandlerMethod [http-nio-8080-exec-2] Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<hr.tvz.bekavac.hardwareapp.dto.HardwareDTO> hr.tvz.bekavac.hardwareapp.controller.HardwareController.updateOnStorage(java.lang.String,hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage): JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]
+2022-04-07 19:04:44,889 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-2] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `hr.tvz.bekavac.hardwareapp.request.UpdateOnStorage` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5]]
+2022-04-07 19:04:44,890 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed 400 BAD_REQUEST
+2022-04-07 19:04:44,925 INFO h.t.b.h.f.SpringActuatorConfiguration$1 [http-nio-8080-exec-2] {"timestamp":1649351084.789110600,"principal":null,"session":null,"request":{"method":"PATCH","uri":"http://localhost:8080/hardware/patchItem/385-C-P-U","headers":{"content-length":["26"],"postman-token":["cfab9397-1e04-4522-afec-bbcdb7b4f653"],"host":["localhost:8080"],"content-type":["application/json"],"connection":["keep-alive"],"accept-encoding":["gzip, deflate, br"],"user-agent":["PostmanRuntime/7.29.0"],"accept":["*/*"]},"remoteAddress":null},"response":{"status":400,"headers":{}},"timeTaken":103}
+2022-04-07 19:04:44,934 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] "ERROR" dispatch for PATCH "/error", parameters={}
+2022-04-07 19:04:44,936 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-04-07 19:04:44,944 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-2] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-04-07 19:04:44,945 DEBUG o.s.core.log.LogFormatUtils [http-nio-8080-exec-2] Writing [{timestamp=Thu Apr 07 19:04:44 CEST 2022, status=400, error=Bad Request, message=JSON parse error: C (truncated)...]
+2022-04-07 19:04:44,959 DEBUG o.s.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Exiting from "ERROR" dispatch, status 400

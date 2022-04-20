@@ -29,4 +29,6 @@ public class HardwareCommand {
     @PositiveOrZero(message =  "Number of items on storage must be non-negative")
     private int onStorage;
 
+
+
 }
