@@ -47,7 +47,7 @@ public class HardwareServiceImpl implements HardwareService {
 
     @Override
     public Optional<HardwareDTO> addHardware(HardwareCommand hardware) {
-        Hardware newHardware = new Hardware(hardware.getName(), hardware.getCode(),
+        Hardware newHardware = new Hardware(hardware.getCode(), hardware.getName(),
                 hardware.getPrice(), hardware.getType(), hardware.getOnStorage());
 
         hardwareRepository.addHardware(newHardware);

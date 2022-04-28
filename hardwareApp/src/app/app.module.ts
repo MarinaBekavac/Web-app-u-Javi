@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { Hardware } from './models/hardware';
-import { HardwareAddComponent } from './hardware.add/hardware.add.component'
+import { HardwareAddComponent } from './hardware.add/hardware.add.component';
 
 /*const routes: Routes = [
   { path: 'hardware', component: HardwareComponent },

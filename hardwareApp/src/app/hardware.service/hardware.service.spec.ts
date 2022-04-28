@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Hardware.ServiceComponent } from './hardware.service.component';
+import { HardwareServiceComponent } from './hardware.service';
 
 describe('Hardware.ServiceComponent', () => {
-  let component: Hardware.ServiceComponent;
-  let fixture: ComponentFixture<Hardware.ServiceComponent>;
+  let component: HardwareServiceComponent;
+  let fixture: ComponentFixture<HardwareServiceComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Hardware.ServiceComponent ]
+      declarations: [ HardwareServiceComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Hardware.ServiceComponent);
+    fixture = TestBed.createComponent(HardwareServiceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

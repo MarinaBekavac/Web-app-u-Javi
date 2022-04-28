@@ -1,7 +1,7 @@
 import { error } from '@angular/compiler/src/util';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { HardwareServiceComponent } from '../hardware.service/hardware.service.component';
+import { HardwareServiceComponent } from '../hardware.service/hardware.service';
 import { HardwareComponent } from '../hardware/hardware.component';
 import { Hardware } from '../models/hardware';
 import { Type } from '../models/type';
@@ -76,8 +76,8 @@ export class HardwareAddComponent implements OnInit {
         },
         error: (e) => console.error(e)
       });
-      this.hardwareComponent.getHardware();
-    
+    this.hardwareComponent.getHardware();
+    this.hardwareComponent.getHardware();
   }
 
 }

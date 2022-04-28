@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HardwareServiceComponent } from '../hardware.service/hardware.service.component';
+import { HardwareServiceComponent } from '../hardware.service/hardware.service';
 import { Hardware } from '../models/hardware';
 import { Type } from '../models/type';
 import { HardwareDetailsComponent } from '../hardware.details/hardware.details.component';
@@ -67,6 +67,7 @@ export class HardwareComponent implements OnInit {
       this.hardwareService.addHardware({ code, name, price, type, onStorage } as Hardware)
       .subscribe(hardwareItem => {
       this.hardware.push(hardwareItem);});
+      this.getHardware();
       }
       
 

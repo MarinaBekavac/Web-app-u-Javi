@@ -1,4 +1,4 @@
-package hr.tvz.bekavac.hardwareapp.impl;
+package hr.tvz.bekavac.hardwareapp.repository.impl;
 
 import hr.tvz.bekavac.hardwareapp.model.Hardware;
 import hr.tvz.bekavac.hardwareapp.repository.HardwareRepository;

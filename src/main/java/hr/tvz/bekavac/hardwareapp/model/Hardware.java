@@ -9,11 +9,20 @@ import lombok.*;
 @Builder
 public class Hardware {
 
-    private String name;
+    private long id;
     private String code;
+    private String name;
     private double price;
     private Type type;
     private int onStorage;
+
+    public Hardware(String code, String name, double price, Type type, int onStorage) {
+        this.name = name;
+        this.code = code;
+        this.price = price;
+        this.type = type;
+        this.onStorage = onStorage;
+    }
 
     public void update(Hardware newHardware) {
         this.code = newHardware.getCode();
@@ -24,4 +33,6 @@ public class Hardware {
     }
 
     public enum Type {CPU, GPU, MBO, RAM, STORAGE, OTHER};
+
+
 }

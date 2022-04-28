@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, Observable, of, tap } from 'rxjs';
-import { HardwareServiceComponent } from '../hardware.service/hardware.service.component';
+import { HardwareServiceComponent } from '../hardware.service/hardware.service';
 import { Type } from '../models/type';
 import { Hardware } from './../models/hardware';
 
@@ -31,6 +31,7 @@ export class HardwareDetailsComponent implements OnInit {
   };
 
   @Input() viewMode = false;
+
 
   ngOnInit(): void {
     if (!this.viewMode) {

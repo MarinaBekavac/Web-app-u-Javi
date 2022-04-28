@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HardwareComponent } from './hardware/hardware.component';
 import { HardwareDetailsComponent } from './hardware.details/hardware.details.component';
-import { HardwareServiceComponent } from './hardware.service/hardware.service.component';
+import { HardwareServiceComponent } from './hardware.service/hardware.service';
 import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [

@@ -19,7 +19,7 @@
     </li>-->
     <li *ngFor="let selectedHardware of hardware" [class.selected]="selectedHardware === selectedHardware" 
     (click)="showDetails(selectedHardware.code)" >
-        <a [routerLink]="['/hardware/', selectedHardware.code]">{{selectedHardware.name}}</a>
+        <a [routerLink]="['/hardware/', selectedHardware.code]"><img src="assets\img\icon.jpg"/>{{selectedHardware.name}}</a>
     </li>
 </ul>
 

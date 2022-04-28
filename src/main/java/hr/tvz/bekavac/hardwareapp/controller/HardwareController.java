@@ -37,6 +37,7 @@ public class HardwareController {
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NO_CONTENT).build());
     }
 
+
     @PostMapping(value = "/addItem")
     @CrossOrigin(origins = "*")
     public ResponseEntity<HardwareDTO> addHardware(@Valid @RequestBody final HardwareCommand request){
@@ -62,5 +63,6 @@ public class HardwareController {
     public void deleteHardware(@PathVariable String code){
         hardwareService.deleteByCode(code);
     }
+
 
 }
