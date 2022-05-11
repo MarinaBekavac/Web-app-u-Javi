@@ -6,22 +6,19 @@ import { AppComponent } from './app.component';
 import { HardwareDetailsComponent } from './hardware.details/hardware.details.component';
 import { HardwareComponent } from './hardware/hardware.component';
 import { AppRoutingModule } from './app-routing.module';
-import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { Hardware } from './models/hardware';
 import { HardwareAddComponent } from './hardware.add/hardware.add.component';
-
-/*const routes: Routes = [
-  { path: 'hardware', component: HardwareComponent },
-  { path: 'hardware/:code', component: HardwareDetailsComponent }
-  ];*/
+import { ReviewComponent } from './review/review.component';
+import { ReviewDetailsComponent } from './review.details/review.details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HardwareComponent,
     HardwareDetailsComponent,
-    HardwareAddComponent
+    HardwareAddComponent,
+    ReviewComponent,
+    ReviewDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +27,7 @@ import { HardwareAddComponent } from './hardware.add/hardware.add.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [HardwareComponent, HardwareDetailsComponent, HardwareAddComponent],
+  providers: [HardwareComponent, HardwareDetailsComponent, HardwareAddComponent, ReviewComponent, ReviewDetailsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

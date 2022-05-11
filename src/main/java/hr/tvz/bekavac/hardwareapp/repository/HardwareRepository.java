@@ -19,4 +19,8 @@ public interface HardwareRepository {
     void updateHardware(String code, Hardware newHardware);
 
     Optional<Hardware> updateOnStorage(String code, int onStorage);
+
+    List<Hardware> findByNameLike(String name);
+
+    Optional<Hardware> findById(long id);
 }

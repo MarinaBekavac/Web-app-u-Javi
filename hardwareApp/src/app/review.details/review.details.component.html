@@ -1,0 +1,19 @@
+<div class="reviewDetails" *ngIf="viewMode">
+    <div *ngIf="review">
+      <div>
+        <strong> {{ review.title }}</strong>
+      </div>
+      <div>
+        {{ review.description}}
+      </div>
+      <div>
+        {{ review.rating }} / five_stars
+      </div>
+      <button (click)="deleteReview(review.id)">
+        Delete
+      </button>
+      <button [routerLink]="['/hardware/', hardwareCode]">
+          Back
+      </button>
+  </div>
+</div>

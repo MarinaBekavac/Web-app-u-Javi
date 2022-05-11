@@ -58,4 +58,14 @@ public class HardwareRepositoryImpl implements HardwareRepository {
         HARDWARE_IN_STOCK.stream().filter(hardware -> hardware.getCode().equals(code)).findFirst().get().setOnStorage(onStorage);
         return findByCode(code);
     }
+
+    @Override
+    public List<Hardware> findByNameLike(String name) {
+        return null;
+    }
+
+    @Override
+    public Optional<Hardware> findById(long id) {
+        return Optional.empty();
+    }
 }

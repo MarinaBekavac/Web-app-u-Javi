@@ -42,9 +42,11 @@ export class HardwareServiceComponent {
           const url = `${this.hardwareUrl}/deleteItem/${code}`;
           return this.http.delete<Hardware>(url, this.httpOptions);
         }
-
   
-
+  getHardwareById(id: number): Observable<Hardware>{
+          const url = `${this.hardwareUrl}/getById/${id}`;
+          return this.http.get<Hardware>(url);
+  }
 
 }
 

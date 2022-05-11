@@ -70,4 +70,14 @@ public class HardwareServiceImpl implements HardwareService {
         HardwareDTO newHardwareDto = mapHardwareToDTO(hardwareRepository.updateOnStorage(code, request.getOnStorage()).get());
         return Optional.ofNullable(newHardwareDto);
     }
+
+    @Override
+    public List<HardwareDTO> findByNameLike(String name){
+        return hardwareRepository.findByNameLike(name).stream().map(this::mapHardwareToDTO).collect(Collectors.toList());
+    }
+
+    @Override
+    public Optional<HardwareDTO> findById(long id) {
+        return Optional.ofNullable(hardwareRepository.findById(id).map(this::mapHardwareToDTO).orElse(null));
+    }
 }

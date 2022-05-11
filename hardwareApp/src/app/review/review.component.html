@@ -1,0 +1,14 @@
+
+<ul class="review">
+    <li *ngFor="let selectedReview of reviews" [class.selected]="selectedReview === selectedReview" 
+    (click)="showDetails(selectedReview.id)" >
+        <a [routerLink]="['/review/', hardwareCode, selectedReview.id]" > {{selectedReview.title}} - {{selectedReview.rating}}/five_stars </a>
+        <!--<a> {{selectedReview.title}} - {{selectedReview.rating}}/five_stars </a>-->
+    </li>
+</ul>
+
+
+<!--<app-review-details [review]="selectedReview" [viewMode]="true"></app-review-details>-->
+
+
+

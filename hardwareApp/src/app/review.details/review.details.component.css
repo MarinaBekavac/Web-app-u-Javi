@@ -1,0 +1,9 @@
+.reviewDetails{
+    border: 2px solid green;
+}
+
+div{
+    margin: 10px;
+    min-width: 50px;
+    min-height: 20px;
+}

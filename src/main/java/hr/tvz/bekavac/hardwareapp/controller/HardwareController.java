@@ -37,6 +37,13 @@ public class HardwareController {
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NO_CONTENT).build());
     }
 
+    @GetMapping(value = "/getById/{id}")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<HardwareDTO> getHardwareById(@PathVariable long id){
+        return hardwareService.findById(id).map(hardwareDTO -> ResponseEntity.status(HttpStatus.OK).body(hardwareDTO))
+                .orElseGet(() -> ResponseEntity.status(HttpStatus.NO_CONTENT).build());
+    }
+
 
     @PostMapping(value = "/addItem")
     @CrossOrigin(origins = "*")
@@ -62,6 +69,11 @@ public class HardwareController {
     @DeleteMapping(value = "/deleteItem/{code}")
     public void deleteHardware(@PathVariable String code){
         hardwareService.deleteByCode(code);
+    }
+
+    @GetMapping(value="/lab5/{name}")
+    public List<HardwareDTO> getByNameLike(@PathVariable String name){
+        return hardwareService.findByNameLike(name);
     }
 
 

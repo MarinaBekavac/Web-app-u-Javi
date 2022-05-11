@@ -105,6 +105,27 @@ public class JDBCHardwareRepositoryImpl implements HardwareRepository {
 
     @Override
     public Optional<Hardware> updateOnStorage(String code, int onStorage) {
-        return Optional.empty();
+        //return Optional.empty();
+        int executed = jdbc.update("UPDATE hardware SET " +
+                        "on_storage = ? WHERE code = ?",
+                onStorage,
+                code);
+        return Optional.ofNullable(findByCode(code).get());
+    }
+
+    public List<Hardware> findByNameLike(String name){
+        String ps = "SELECT * FROM hardware WHERE LOWER(name) LIKE '%" + name.toLowerCase() +"%'";
+        return jdbc.query(ps, this::mapRowToHardware);
+    }
+
+    @Override
+    public Optional<Hardware> findById(long id) {
+        try {
+            return Optional.ofNullable(jdbc.queryForObject(SELECT_ALL + " where id=?",
+                    this::mapRowToHardware, id));
+        }catch (EmptyResultDataAccessException ex){
+            log.warn("No entry found for id '{}'", id);
+            return Optional.empty();
+        }
     }
 }

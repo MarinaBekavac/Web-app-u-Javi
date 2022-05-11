@@ -1,7 +1,7 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { catchError, Observable, of, tap } from 'rxjs';
+import { Observable, of, tap } from 'rxjs';
 import { HardwareServiceComponent } from '../hardware.service/hardware.service';
 import { Type } from '../models/type';
 import { Hardware } from './../models/hardware';
@@ -12,14 +12,6 @@ import { Hardware } from './../models/hardware';
   styleUrls: ['./hardware.details.component.css']
 })
 export class HardwareDetailsComponent implements OnInit {
-
-  /*@Input()
-  hardware!: Hardware;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }*/
 
   @Input()
   hardware: Hardware = {
@@ -39,24 +31,17 @@ export class HardwareDetailsComponent implements OnInit {
     }
   }
 
-  private hardwareUrl = 'http://localhost:8080/hardware';
   httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
   constructor(
     private hardwareService: HardwareServiceComponent,
-    private http: HttpClient,
     private route: ActivatedRoute,
     private router: Router
   ) { }
 
   getHardwareByCode(code: string): void {
-    /*const url = `${this.hardwareUrl}/${code}`;
-    return this.http.get<Hardware>(url)
-    .pipe(
-      tap((newHardware: Hardware) => this.hardware=newHardware),
-      catchError(this.handleError<Hardware>('getHardwareByCode')));*/
       this.viewMode = true;
       this.hardwareService.getHardwareByCode(code).subscribe({
         next: (data) => {
