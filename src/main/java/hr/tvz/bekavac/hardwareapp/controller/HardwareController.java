@@ -47,12 +47,26 @@ public class HardwareController {
 
     @PostMapping(value = "/addItem")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<HardwareDTO> addHardware(@Valid @RequestBody final HardwareCommand request){
+    public ResponseEntity<HardwareDTO> addHardwareDifferentURL(@Valid @RequestBody final HardwareCommand request){
         return hardwareService.addHardware(request).map(hardwareDTO -> ResponseEntity.status(HttpStatus.CREATED).body(hardwareDTO))
                                             .orElseGet(() -> ResponseEntity.status(HttpStatus.CONFLICT).build());
     }
 
+    @PostMapping
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<HardwareDTO> addHardware(@Valid @RequestBody final HardwareCommand request){
+        return hardwareService.addHardware(request).map(hardwareDTO -> ResponseEntity.status(HttpStatus.CREATED).body(hardwareDTO))
+                .orElseGet(() -> ResponseEntity.status(HttpStatus.CONFLICT).build());
+    }
+
     @PutMapping(value = "/editItem/{code}")
+    public ResponseEntity<HardwareDTO> updateHardwareDifferentURL(@PathVariable String code, @Valid @RequestBody final HardwareCommand request){
+        return hardwareService.updateHardware(code, request).map(hardwareDTO -> ResponseEntity.status(HttpStatus.CONFLICT).body(hardwareDTO))
+                .orElseGet(() -> ResponseEntity.status(HttpStatus.NO_CONTENT).build());
+    }
+
+    @PutMapping(value = "/{code}")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<HardwareDTO> updateHardware(@PathVariable String code, @Valid @RequestBody final HardwareCommand request){
         return hardwareService.updateHardware(code, request).map(hardwareDTO -> ResponseEntity.status(HttpStatus.CONFLICT).body(hardwareDTO))
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NO_CONTENT).build());
@@ -67,6 +81,13 @@ public class HardwareController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @CrossOrigin(origins = "*")
     @DeleteMapping(value = "/deleteItem/{code}")
+    public void deleteHardwareDifferentURL(@PathVariable String code){
+        hardwareService.deleteByCode(code);
+    }
+
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @CrossOrigin(origins = "*")
+    @DeleteMapping(value = "/{code}")
     public void deleteHardware(@PathVariable String code){
         hardwareService.deleteByCode(code);
     }
