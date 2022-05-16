@@ -54,6 +54,11 @@ public class ReviewServiceImpl implements ReviewService {
         return Optional.ofNullable(mapToDTO(reviewRepository.save(this.mapCommandToReview(review))));
     }
 
+    @Override
+    public Optional<List<ReviewDTO>> findAllByDescriptionLike(String desc) {
+        return Optional.ofNullable(reviewRepository.findByDescriptionLikeIgnoreCase(desc).stream().map(this::mapToDTO).collect(Collectors.toList()));
+    }
+
     private Review mapCommandToReview(ReviewCommand review){
         Optional<Hardware> hardware = hardwareRepository.findByCode(review.getHardwareCode());
         if(!hardware.isPresent()){

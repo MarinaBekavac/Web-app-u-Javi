@@ -1,0 +1,21 @@
+<input type="text" name="desc" [(ngModel)]="review.description" #desc>
+
+<button (click)="findReviews(desc.value)">Find</button>
+
+
+<br/>
+
+<div *ngIf="reviews.length!=0">
+    <ul class="review">
+        <li *ngFor="let selectedReview of reviews" [class.selected]="selectedReview === selectedReview" 
+        (click)="showDetails(selectedReview.id, selectedReview.hardwareId)" >
+            <a [routerLink]="['/review/labos6/', hardwareCode, selectedReview.id]" > {{selectedReview.title}} - {{selectedReview.rating}}/five_stars </a>
+            <!--<a> {{selectedReview.title}} - {{selectedReview.rating}}/five_stars </a>-->
+        </li>
+    </ul>
+</div>
+
+<app-labos6details
+      [viewMode]="true"
+      [review]="selectedReview"
+    ></app-labos6details>

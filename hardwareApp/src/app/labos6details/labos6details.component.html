@@ -1,0 +1,32 @@
+<div class="reviewDetails" *ngIf="viewMode">
+    <div *ngIf="review">
+      <div>
+        <strong> {{ review.title }}</strong>
+      </div>
+      <div>
+        {{ review.description}}
+      </div>
+      <div>
+        {{ review.rating }} / five_stars
+      </div>
+  </div>
+</div>
+
+
+<div *ngIf="viewMode;">
+    <div *ngIf="hardware">
+      <h4>Details</h4>
+      <div>
+        <label><strong>Name:</strong></label> {{ hardware.name }}
+      </div>
+      <div>
+        <label><strong>Code:</strong></label>
+        {{ hardware.code }}
+      </div>
+      <div>
+        <label><strong>Price:</strong></label>
+        {{ hardware.price }}
+
+  </div>
+  </div>
+

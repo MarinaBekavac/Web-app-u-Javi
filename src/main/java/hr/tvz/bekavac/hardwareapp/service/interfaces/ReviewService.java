@@ -21,4 +21,6 @@ public interface ReviewService {
 
     Optional<ReviewDTO> addReview(ReviewCommand review);
 
+    Optional<List<ReviewDTO>> findAllByDescriptionLike(String desc);
+
 }

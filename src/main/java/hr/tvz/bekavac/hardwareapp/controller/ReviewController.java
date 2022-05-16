@@ -66,4 +66,12 @@ public class ReviewController {
     public void deleteHardware(@PathVariable long id){
         reviewService.deleteById(id);
     }
+
+
+    @GetMapping(value = "/labos6/{desc}")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<List<ReviewDTO>> getByDescLike(@PathVariable String desc){
+        return reviewService.findAllByDescriptionLike(desc).map(reviewDTO -> ResponseEntity.status(HttpStatus.OK).body(reviewDTO))
+                .orElseGet(() -> ResponseEntity.status(HttpStatus.NO_CONTENT).build());
+    }
 }

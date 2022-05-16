@@ -35,5 +35,9 @@ export class ReviewService {
     return this.http.delete<Review>(url, this.httpOptions);
   }
   
+  findReviewsDyDecs(desc: string): Observable<Review[]>{
+    const url = `${this.reviewUrl}/labos6/${desc}`;
+    return this.http.get<Review[]>(url, this.httpOptions);
+  }
 
 }

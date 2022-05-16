@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HardwareAddComponent } from './hardware.add/hardware.add.component';
 import { ReviewComponent } from './review/review.component';
 import { ReviewDetailsComponent } from './review.details/review.details.component';
+import { Labos6Component } from './labos6/labos6.component';
+import { Labos6detailsComponent } from './labos6details/labos6details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ReviewDetailsComponent } from './review.details/review.details.componen
     HardwareDetailsComponent,
     HardwareAddComponent,
     ReviewComponent,
-    ReviewDetailsComponent
+    ReviewDetailsComponent,
+    Labos6Component,
+    Labos6detailsComponent
   ],
   imports: [
     BrowserModule,

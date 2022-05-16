@@ -21,4 +21,12 @@ public interface ReviewRepository extends JpaRepository<Review, Long>, CrudRepos
 
     Review save(Review review);
 
+    List<Review> findAllByRating(Review.Rating rating);
+
+    List<Review> findAllByTitle(String title);
+
+    List<Review> findAllByDescription(String description);
+
+    List<Review> findByDescriptionLikeIgnoreCase(String descToFind);
+
 }
