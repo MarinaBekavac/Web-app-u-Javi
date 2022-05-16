@@ -13,7 +13,7 @@ public class ReviewDTO {
     private long id;
     private long hardwareId;
     private String title;
-    private String description;
+    private String text;
     private Review.Rating rating;
 
 }

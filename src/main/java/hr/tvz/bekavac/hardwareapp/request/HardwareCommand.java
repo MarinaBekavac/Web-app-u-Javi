@@ -27,7 +27,7 @@ public class HardwareCommand {
     private Hardware.Type type;
 
     @PositiveOrZero(message =  "Number of items on storage must be non-negative")
-    private int onStorage;
+    private int stock;
 
 
 
