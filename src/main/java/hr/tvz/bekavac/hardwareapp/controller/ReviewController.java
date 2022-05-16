@@ -45,6 +45,13 @@ public class ReviewController {
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NO_CONTENT).build());
     }
 
+    @GetMapping(params = "hardwareCode")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<List<ReviewDTO>> getByHardwareCodeWithParams(@RequestParam final String hardwareCode){
+        return reviewService.findByHardwareCode(hardwareCode).map(reviewDTO -> ResponseEntity.status(HttpStatus.OK).body(reviewDTO))
+                .orElseGet(() -> ResponseEntity.status(HttpStatus.NO_CONTENT).build());
+    }
+
     @GetMapping(value = "/getReview/{id}")
     @CrossOrigin(origins = "*")
     public ResponseEntity<ReviewDTO> getReviewById(@PathVariable Long id){
