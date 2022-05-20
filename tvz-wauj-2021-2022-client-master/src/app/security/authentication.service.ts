@@ -60,6 +60,7 @@ export class AuthenticationService {
         authorities = decodedToken[usernameKey]
       }
     }
+    console.log("Authorities: ", authorities);
     return authorities != null && authorities.includes(adminRoleName);
   }
 
