@@ -8,6 +8,7 @@ import hr.tvz.bekavac.hardwareapp.service.interfaces.ReviewService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
@@ -38,6 +39,7 @@ public class ReviewController {
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NO_CONTENT).build());
     }*/
 
+    @Secured("ROLE_ADMIN")
     @GetMapping(value = "/{code}")
     @CrossOrigin(origins = "*")
     public ResponseEntity<List<ReviewDTO>> getByHardwareCode(@PathVariable String code){
@@ -59,6 +61,7 @@ public class ReviewController {
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NO_CONTENT).build());
     }
 
+    @Secured("ROLE_ADMIN")
     @Transactional
     @PostMapping(value = "/addReview")
     @CrossOrigin(origins = "*")
@@ -67,6 +70,7 @@ public class ReviewController {
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.CONFLICT).build());
     }
 
+    @Secured({"ROLE_ADMIN", "ROLE_DELETER"})
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @CrossOrigin(origins = "*")
     @DeleteMapping(value = "/deleteReview/{id}")

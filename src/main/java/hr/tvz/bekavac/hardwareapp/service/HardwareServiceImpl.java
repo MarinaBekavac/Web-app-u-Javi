@@ -33,7 +33,7 @@ public class HardwareServiceImpl implements HardwareService {
 
     private Hardware mapCommandToHardware(HardwareCommand hardwareCommand){
         return new Hardware().builder().code(hardwareCommand.getCode()).name(hardwareCommand.getName()).type(hardwareCommand.getType())
-                .price(hardwareCommand.getPrice()).onStorage(hardwareCommand.getOnStorage()).build();
+                .price(hardwareCommand.getPrice()).onStorage(hardwareCommand.getStock()).build();
     }
 
     private HardwareDTO mapCommandToDTO(HardwareCommand request) {
@@ -48,7 +48,7 @@ public class HardwareServiceImpl implements HardwareService {
     @Override
     public Optional<HardwareDTO> addHardware(HardwareCommand hardware) {
         Hardware newHardware = new Hardware(hardware.getCode(), hardware.getName(),
-                hardware.getPrice(), hardware.getType(), hardware.getOnStorage());
+                hardware.getPrice(), hardware.getType(), hardware.getStock());
 
         hardwareRepository.addHardware(newHardware);
         return Optional.ofNullable(mapHardwareToDTO(newHardware));

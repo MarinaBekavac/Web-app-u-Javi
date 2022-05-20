@@ -7,6 +7,7 @@ import hr.tvz.bekavac.hardwareapp.service.interfaces.HardwareService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -45,6 +46,7 @@ public class HardwareController {
     }
 
 
+    @Secured({"ROLE_ADMIN", "ROLE_UPDATER"})
     @PostMapping(value = "/addItem")
     @CrossOrigin(origins = "*")
     public ResponseEntity<HardwareDTO> addHardwareDifferentURL(@Valid @RequestBody final HardwareCommand request){
@@ -52,6 +54,7 @@ public class HardwareController {
                                             .orElseGet(() -> ResponseEntity.status(HttpStatus.CONFLICT).build());
     }
 
+    @Secured({"ROLE_ADMIN", "ROLE_UPDATER"})
     @PostMapping
     @CrossOrigin(origins = "*")
     public ResponseEntity<HardwareDTO> addHardware(@Valid @RequestBody final HardwareCommand request){
@@ -59,12 +62,14 @@ public class HardwareController {
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.CONFLICT).build());
     }
 
+    @Secured("ROLE_ADMIN")
     @PutMapping(value = "/editItem/{code}")
     public ResponseEntity<HardwareDTO> updateHardwareDifferentURL(@PathVariable String code, @Valid @RequestBody final HardwareCommand request){
         return hardwareService.updateHardware(code, request).map(hardwareDTO -> ResponseEntity.status(HttpStatus.CONFLICT).body(hardwareDTO))
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NO_CONTENT).build());
     }
 
+    @Secured("ROLE_ADMIN")
     @PutMapping(value = "/{code}")
     @CrossOrigin(origins = "*")
     public ResponseEntity<HardwareDTO> updateHardware(@PathVariable String code, @Valid @RequestBody final HardwareCommand request){
@@ -72,12 +77,14 @@ public class HardwareController {
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NO_CONTENT).build());
     }
 
+    @Secured("ROLE_ADMIN")
     @PatchMapping(value="patchItem/{code}")
     public ResponseEntity<HardwareDTO> updateOnStorage(@PathVariable String code, @Valid @RequestBody final UpdateOnStorage request){
         return hardwareService.updateOnStorage(code, request).map(hardwareDTO -> ResponseEntity.status(HttpStatus.OK).body(hardwareDTO))
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NO_CONTENT).build());
     }
 
+    @Secured({"ROLE_ADMIN", "ROLE_DELETER"})
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @CrossOrigin(origins = "*")
     @DeleteMapping(value = "/deleteItem/{code}")
@@ -85,6 +92,7 @@ public class HardwareController {
         hardwareService.deleteByCode(code);
     }
 
+    @Secured({"ROLE_ADMIN", "ROLE_DELETER"})
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @CrossOrigin(origins = "*")
     @DeleteMapping(value = "/{code}")
