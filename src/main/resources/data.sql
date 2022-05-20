@@ -13,16 +13,22 @@ insert into review values(6, 3, 'Sixth review', 'This is a sixth review', 'one_s
 insert into user(id, username, password)
 values
     (1, 'user', '$2a$12$h0HcS2QDb/7zPASbLa2GoOTSRP6CWK0oX7pCK.dPjkM6L5N4pNovi'), -- password = user
-    (2, 'admin', '$2a$12$INo0nbj40sQrTB7b28KJput/bNltGmFyCfRsUhvy73qcXo5/XdsTG'); -- password = admin
+    (2, 'admin', '$2a$12$INo0nbj40sQrTB7b28KJput/bNltGmFyCfRsUhvy73qcXo5/XdsTG'), -- password = admin
+    (3, 'updater', '$2a$12$T5UxnwAqhEiJ6qwcOTUqJ.tbiOxIgyOIcE0WsnGdvu8N99otxPBJu'), -- password = updater
+    (4, 'deleter', '$2a$12$/IIAjRXMxeV9p1P1qxAi1.BEy7a1aRa7F4inFCOmI5GhF1qs.oNTy'); -- password = deleter
 
 
 insert into authority (id, authority_name)
 values
     (1, 'ROLE_ADMIN'),
-    (2, 'ROLE_USER');
+    (2, 'ROLE_USER'),
+    (3, 'ROLE_UPDATER'),
+    (4, 'ROLE_DELETER');
 
 
 insert into user_authority (user_id, authority_id)
 values
     (1, 2),
-    (2, 1);
+    (2, 1),
+    (3, 3),
+    (4, 4);
