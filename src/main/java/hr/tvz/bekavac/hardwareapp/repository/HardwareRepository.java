@@ -14,6 +14,8 @@ public interface HardwareRepository {
 
     void addHardware(Hardware hardware);
 
+    public Optional<Hardware> addHardwareWithReturnValue(Hardware hardware);
+
     void deleteByCode(String code);
 
     void updateHardware(String code, Hardware newHardware);
@@ -23,4 +25,6 @@ public interface HardwareRepository {
     List<Hardware> findByNameLike(String name);
 
     Optional<Hardware> findById(long id);
+
+    List<Hardware> findAllOnStock();
 }

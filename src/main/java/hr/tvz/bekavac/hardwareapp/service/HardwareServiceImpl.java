@@ -28,15 +28,19 @@ public class HardwareServiceImpl implements HardwareService {
     }
 
     private HardwareDTO mapHardwareToDTO(final Hardware hardware){
+        if(hardware == null)
+            return null;
         return new HardwareDTO(hardware.getCode(), hardware.getName(), hardware.getPrice());
     }
 
     private Hardware mapCommandToHardware(HardwareCommand hardwareCommand){
         return new Hardware().builder().code(hardwareCommand.getCode()).name(hardwareCommand.getName()).type(hardwareCommand.getType())
-                .price(hardwareCommand.getPrice()).onStorage(hardwareCommand.getOnStorage()).build();
+                .price(hardwareCommand.getPrice()).onStorage(hardwareCommand.getStock()).build();
     }
 
     private HardwareDTO mapCommandToDTO(HardwareCommand request) {
+        if(request == null)
+            return null;
         return new HardwareDTO(request.getCode(), request.getName(), request.getPrice());
     }
 
@@ -48,10 +52,15 @@ public class HardwareServiceImpl implements HardwareService {
     @Override
     public Optional<HardwareDTO> addHardware(HardwareCommand hardware) {
         Hardware newHardware = new Hardware(hardware.getCode(), hardware.getName(),
-                hardware.getPrice(), hardware.getType(), hardware.getOnStorage());
+                hardware.getPrice(), hardware.getType(), hardware.getStock());
 
-        hardwareRepository.addHardware(newHardware);
-        return Optional.ofNullable(mapHardwareToDTO(newHardware));
+        /*hardwareRepository.addHardware(newHardware);
+        return Optional.ofNullable(mapHardwareToDTO(newHardware));*/
+        Optional<Hardware> optionalHardware = hardwareRepository.addHardwareWithReturnValue(newHardware);
+        if(!optionalHardware.isPresent()){
+            return Optional.empty();
+        }
+        return Optional.ofNullable(mapHardwareToDTO(optionalHardware.get()));
     }
 
     @Override

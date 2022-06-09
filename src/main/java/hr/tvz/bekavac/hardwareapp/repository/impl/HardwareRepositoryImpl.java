@@ -18,6 +18,10 @@ public class HardwareRepositoryImpl implements HardwareRepository {
             new Hardware("RAM", "123-RAM-.i89", 320.0, Hardware.Type.RAM, 7))
     );
 
+    @Override
+    public List<Hardware> findAllOnStock() {
+        return null;
+    }
 
     @Override
     public List<Hardware> findAll() {
@@ -34,6 +38,11 @@ public class HardwareRepositoryImpl implements HardwareRepository {
     public void addHardware(Hardware hardware) {
         HARDWARE_IN_STOCK.add(hardware);
         log.info("Adding hardware to list");
+    }
+
+    @Override
+    public Optional<Hardware> addHardwareWithReturnValue(Hardware hardware) {
+        return Optional.empty();
     }
 
     @Override
