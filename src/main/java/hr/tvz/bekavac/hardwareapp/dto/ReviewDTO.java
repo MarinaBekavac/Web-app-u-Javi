@@ -13,7 +13,11 @@ public class ReviewDTO {
     private long id;
     private long hardwareId;
     private String title;
-    private String text;
+    private String description;
     private Review.Rating rating;
 
+    @Override
+    public String toString() {
+        return "Review id: " + id + " - Title: " + title + " - Text: " + description + " - Rating: " + rating;
+    }
 }

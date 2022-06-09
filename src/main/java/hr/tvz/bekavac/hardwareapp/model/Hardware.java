@@ -15,6 +15,7 @@ import java.util.List;
 @Builder
 public class Hardware implements Serializable {
 
+    @Column(unique=true)
     private String code;
 
     @Id
@@ -70,5 +71,9 @@ public class Hardware implements Serializable {
 
     public enum Type {CPU, GPU, MBO, RAM, STORAGE, OTHER};
 
-
+    @Override
+    public String toString() {
+        return "Hardware ID: " + id + " - Code: " + code + " - Name: " + name + " - Price: " +
+                price + " - Type: " + type + " - Stock: " + onStorage;
+    }
 }

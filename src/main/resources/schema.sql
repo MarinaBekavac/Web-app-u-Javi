@@ -1,3 +1,5 @@
+
+DROP TABLE IF EXISTS review;
 DROP TABLE IF EXISTS hardware;
 
 CREATE TABLE hardware(
@@ -9,7 +11,6 @@ CREATE TABLE hardware(
     on_storage INT
 );
 
-DROP TABLE IF EXISTS review;
 
 create table review(
     id int identity primary key,
@@ -20,8 +21,12 @@ create table review(
     foreign key (hardware_id) references hardware(id)
 );
 
+DROP TABLE IF EXISTS user_authority;
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS authority;
+
 create table if not exists user (
-    id identity,
+    id int identity,
     username varchar(100) not null unique,
     password varchar(1000) not null
     );

@@ -3,6 +3,7 @@ package hr.tvz.bekavac.hardwareapp.repository.impl;
 import hr.tvz.bekavac.hardwareapp.model.Hardware;
 import hr.tvz.bekavac.hardwareapp.repository.HardwareRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -28,11 +29,15 @@ public class JDBCHardwareRepositoryImpl implements HardwareRepository {
 
     private final JdbcTemplate jdbc;
     private final SimpleJdbcInsert inserter;
+    private final SimpleJdbcInsert inserterReview;
 
     public JDBCHardwareRepositoryImpl(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
         this.inserter = new SimpleJdbcInsert(jdbc)
                 .withTableName("hardware")
+                .usingGeneratedKeyColumns("id");
+        this.inserterReview = new SimpleJdbcInsert(jdbc)
+                .withTableName("review")
                 .usingGeneratedKeyColumns("id");
     }
 
@@ -52,6 +57,11 @@ public class JDBCHardwareRepositoryImpl implements HardwareRepository {
     }
 
     @Override
+    public List<Hardware> findAllOnStock() {
+        return List.copyOf(jdbc.query(SELECT_ALL + " where on_storage > 0", this::mapRowToHardware));
+    }
+
+    @Override
     public Optional<Hardware> findByCode(String code) {
         try {
             return Optional.ofNullable(jdbc.queryForObject(SELECT_ALL + " where code=?",
@@ -68,7 +78,21 @@ public class JDBCHardwareRepositoryImpl implements HardwareRepository {
             log.info("Adding hardware 'code:{}-name:{}'", hardware.getCode(), hardware.getName());
             hardware.setId(saveHardwareDetails(hardware));
         }catch (DuplicateKeyException ex){
+            hardware = null;
             log.warn("Duplicate key found for hardware '{}' - '{}'", hardware.getCode(), hardware.getName());
+        }
+    }
+
+    @Override
+    public Optional<Hardware> addHardwareWithReturnValue(Hardware hardware) {
+        try {
+            log.info("Adding hardware 'code:{} - name:{}'", hardware.getCode(), hardware.getName());
+            hardware.setId(saveHardwareDetails(hardware));
+            return Optional.ofNullable(hardware);
+        }catch (DuplicateKeyException ex){
+            log.warn("Duplicate key found for hardware '{}' - '{}'", hardware.getCode(), hardware.getName());
+            hardware = null;
+            return Optional.ofNullable(hardware);
         }
     }
 
@@ -86,6 +110,7 @@ public class JDBCHardwareRepositoryImpl implements HardwareRepository {
 
     @Override
     public void deleteByCode(String code) {
+        jdbc.update("DELETE FROM review WHERE hardware_id in (SELECT id from hardware where code = ?)", code);
         jdbc.update("DELETE FROM hardware WHERE code = ?", code);
     }
 

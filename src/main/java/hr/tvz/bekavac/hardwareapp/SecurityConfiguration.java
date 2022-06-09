@@ -25,6 +25,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     static final List<String> UNAUTHENTICATED_ENDPOINTS = List.of(
             // TODO - popisati putanje koje ne trebaju biti prolaziti autentifikaciju
+            "/authentication/login",
+            "/h2-console/**",
+            "/h2/**"
+
     );
 
     private final JwtFilter jwtFilter;
@@ -37,6 +41,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         // TODO - pobrinuti se da radi pristup h2 konzoli, slobodno ugasiti CORS, CSRF i slične zaštite
+        http = http.cors().and().csrf().disable();
+        http = http.headers().frameOptions().disable()
+                .and();
+
 
         http = http
                 .sessionManagement()
